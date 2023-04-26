@@ -10,7 +10,7 @@ locals {
   mgmtagent_dynamic_group_name = "Mgmtagent_Dynamicgroup_${local.timestamp}"
   mgmtagent_policy_name        = "Mgmtagent_Policies_${local.timestamp}"
   db_name                      = "${var.la_entity_name}"
-  log_group_name               = "EBSDBLogs"
+  log_group_name               = "PSFTDBLogs"
 }
 
 # Compute instance dynamic group and policies
@@ -183,7 +183,7 @@ module "logan_sources" {
 resource "null_resource" "import_lookups" {
   
   provisioner "local-exec" {
-    command = "python3 ./scripts/import_lookup.py -t Lookup -a ${var.auth_type} -p ${var.config_file_profile} -n \"EBS Functional Sensors\" -f ./contents/lookups/EBS_Lookup.csv"
+    command = "python3 ./scripts/import_lookup.py -t Lookup -a ${var.auth_type} -p ${var.config_file_profile} -n \"PSFT Functional Sensors\" -f ./contents/lookups/PSFT_Lookup.csv"
   }
 }
 
