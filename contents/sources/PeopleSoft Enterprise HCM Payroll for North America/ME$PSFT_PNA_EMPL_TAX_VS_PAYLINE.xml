@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LoganContent oms_version="2.50.2.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1650039506307" content_version="2.50.2.0.0" xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd">
+    <Field oms_version="2.50.2.0.0">
+        <DisplayName>sensor</DisplayName>
+        <FieldType>1</FieldType>
+        <IsSystem>0</IsSystem>
+        <IsPrimary>1</IsPrimary>
+        <DataType>STRING</DataType>
+        <IsMetricKeyEligible>0</IsMetricKeyEligible>
+        <IsMetricValueEligible>0</IsMetricValueEligible>
+        <FacetEligible>1</FacetEligible>
+        <RangeFacetEligible>0</RangeFacetEligible>
+        <TableEligible>1</TableEligible>
+        <FacetPriority>1</FacetPriority>
+        <Summarizable>1</Summarizable>
+        <HighCardinality>1</HighCardinality>
+        <LargeData>0</LargeData>
+        <MultiValued>0</MultiValued>
+        <SMAEnabledSetting>0</SMAEnabledSetting>
+    </Field>
+    
+    <Tag>
+<Name>#medium_severity_sensor</Name>
+<DisplayName>Medium Severity Sensor</DisplayName>
+<IsSystem>0</IsSystem>
+<ProblemPriority>MEDIUM</ProblemPriority>
+</Tag>
+    <Source name="PSFT Sensor: Tax data and payline do not reconcile - Weekly" oms_version="2.50.2.0.0" configWarningSettings="0">
+    <SourceType>database_sql</SourceType>
+    <TargetTypes>
+        <TargetType>omc_oracle_db_instance</TargetType>
+        <TargetType>omc_oracle_pdb</TargetType>
+    </TargetTypes>
+    <DisplayName>PSFT Sensor: Tax data and payline do not reconcile - Weekly</DisplayName>
+    <Description><![CDATA[]]></Description>
+    <IsSystem>0</IsSystem>
+    <IsSecureContent>1</IsSecureContent>
+    <Patterns>
+        <DBPattern dateTimeField="entrytime" dateTimeColumns="entrytime">
+        <SQLQuery>
+            <![CDATA[select 'PSFT_PNA_EMPL_TAX_VS_PAYLINE' sensor, to_timestamp(to_char(sysdate, 'YYYY-MM-DD hh24:mi:ss'), 'YYYY-MM-DD hh24:mi:ss') entrytime, s.KEY_DATA FROM (select 'Y' as EVENT  , 'Investigate employee / add state to Tax Distribution Table' as SOLUTION  , count(*) || ' Checks found where employee may be missing some State Tax setup' as KEY_DATA  from (  select distinct  ('Company = ' || ppcal.COMPANY || '; Pay group = ' || ppcal.PAYGROUP || '; Off cycle = ' || ppe.OFF_CYCLE  || '; Page number = ' || ppe.PAGE_NUM || '; Line number = ' || ppe.LINE_NUM || '; Sepcheck = ' || ppe.SEPCHK ||  '; EMPLID = ' || pstaxd.EMPLID || '; State = ' || pstaxd.STATE || '; Locality = ' || pltaxdt.LOCALITY || '; pay end date = ' || ppe.PAY_END_DT ||  '; Effective date = ' || pstaxd.EFFDT) KEY_DATA  from SYSADM.PS_PAY_CALENDAR ppcal  join SYSADM.PS_PAY_EARNINGS ppe on ( ppcal.COMPANY = ppe.COMPANY and ppcal.PAYGROUP = ppe.PAYGROUP and ppcal.PAY_END_DT = ppe.PAY_END_DT )  join SYSADM.PS_PAY_CHECK ppc on ( ppe.COMPANY = ppc.COMPANY and ppe.PAYGROUP = ppc.PAYGROUP and ppe.PAY_END_DT = ppc.PAY_END_DT and ppe.OFF_CYCLE = ppc.OFF_CYCLE and ppe.PAGE_NUM = ppc.PAGE_NUM and  ppe.LINE_NUM = ppc.LINE_NUM and ppe.SEPCHK = ppc.SEPCHK and ppe.EmplID = ppc.EmplID and ppe.STATE = ppc.STATE)  join SYSADM.PS_STATE_TAX_DATA pstaxd on ( ppe.COMPANY = pstaxd.COMPANY and ppe.EMPLID = pstaxd.EMPLID and ppe.STATE = pstaxd.STATE and ppe.PAY_END_DT <= pstaxd.EFFDT )  join SYSADM.PS_LOCAL_TAX_DATA pltaxdt on ( ppe.COMPANY = pltaxdt.COMPANY and ppe.EMPLID = pltaxdt.EMPLID and ppe.STATE = pltaxdt.STATE and ppe.LOCALITY = pltaxdt.LOCALITY and ppe.PAY_END_DT <= pltaxdt.EFFDT )  where ppcal.PAY_CONFIRM_RUN <> 'Y'  ) having count(*) >= 1) s]]>
+        </SQLQuery>
+        <IsInclude>1</IsInclude>
+            <InUse>1</InUse>
+            <DBQueryFieldList>
+                <DBPatternSeqField>entrytime</DBPatternSeqField>
+                <DBPatternField>
+                    <DBQueryColName>sensor</DBQueryColName>
+                    <FieldName>udfs1</FieldName>
+                </DBPatternField>
+                <DBPatternField>
+                    <DBQueryColName>entrytime</DBQueryColName>
+                    <FieldName>time</FieldName>
+                </DBPatternField>
+                <DBPatternField>
+                                        <DBQueryColName>KEY_DATA</DBQueryColName>
+                                        <FieldName>data</FieldName>
+                                   </DBPatternField>
+            </DBQueryFieldList>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+            </DBPattern>
+    </Patterns>
+        <TagConditions>
+            <TagCondition operator="CONTAINS_REGEX" field="udfs1" alertRuleVisible="0">
+                <ConditionValues>
+                    <ConditionValue>%</ConditionValue>
+                </ConditionValues>
+                <ConditionTags tagField="mtag">
+                    <ConditionTag>#medium_severity_sensor</ConditionTag>
+                </ConditionTags>
+                <IsSystem>0</IsSystem>
+                <IsEnabled>1</IsEnabled>
+            </TagCondition>
+        </TagConditions>
+        <IsHidden>0</IsHidden>
+        <IsSMAEnabled>0</IsSMAEnabled>
+    </Source>
+    <FieldNameMaps>
+        <FieldNameMap>
+            <Name>udfs1</Name>
+            <DisplayName>sensor</DisplayName>
+        </FieldNameMap>
+        
+    </FieldNameMaps>
+</LoganContent>

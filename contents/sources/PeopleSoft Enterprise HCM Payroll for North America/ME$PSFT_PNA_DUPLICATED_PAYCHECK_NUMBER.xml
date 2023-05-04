@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LoganContent oms_version="2.50.2.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1650039506307" content_version="2.50.2.0.0" xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd">
+    <Field oms_version="2.50.2.0.0">
+        <DisplayName>sensor</DisplayName>
+        <FieldType>1</FieldType>
+        <IsSystem>0</IsSystem>
+        <IsPrimary>1</IsPrimary>
+        <DataType>STRING</DataType>
+        <IsMetricKeyEligible>0</IsMetricKeyEligible>
+        <IsMetricValueEligible>0</IsMetricValueEligible>
+        <FacetEligible>1</FacetEligible>
+        <RangeFacetEligible>0</RangeFacetEligible>
+        <TableEligible>1</TableEligible>
+        <FacetPriority>1</FacetPriority>
+        <Summarizable>1</Summarizable>
+        <HighCardinality>1</HighCardinality>
+        <LargeData>0</LargeData>
+        <MultiValued>0</MultiValued>
+        <SMAEnabledSetting>0</SMAEnabledSetting>
+    </Field>
+    
+    <Tag>
+<Name>#medium_severity_sensor</Name>
+<DisplayName>Medium Severity Sensor</DisplayName>
+<IsSystem>0</IsSystem>
+<ProblemPriority>MEDIUM</ProblemPriority>
+</Tag>
+    <Source name="PSFT Sensor: Duplicate pay check number - Daily" oms_version="2.50.2.0.0" configWarningSettings="0">
+    <SourceType>database_sql</SourceType>
+    <TargetTypes>
+        <TargetType>omc_oracle_db_instance</TargetType>
+        <TargetType>omc_oracle_pdb</TargetType>
+    </TargetTypes>
+    <DisplayName>PSFT Sensor: Duplicate pay check number - Daily</DisplayName>
+    <Description><![CDATA[Check if duplicate pay Check numbers exist.]]></Description>
+    <IsSystem>0</IsSystem>
+    <IsSecureContent>1</IsSecureContent>
+    <Patterns>
+        <DBPattern dateTimeField="entrytime" dateTimeColumns="entrytime">
+        <SQLQuery>
+            <![CDATA[select 'PSFT_PNA_DUPLICATED_PAYCHECK_NUMBER' sensor, to_timestamp(to_char(sysdate, 'YYYY-MM-DD hh24:mi:ss'), 'YYYY-MM-DD hh24:mi:ss') entrytime, s.KEY_DATA FROM (select 'Y' as EVENT  , 'Verify if duplicate paychecks are an issue - refer to EPY: Paychecks Have Duplicate Paycheck Numbers For Same Form ID. (Doc ID 2847956.1)' as SOLUTION  , count(*) || ' potential duplicate data detected in paychecks.' as KEY_DATA  from (  select distinct  ('Form ID = '||a.FORM_ID ||'; Company = ' || a.COMPANY || '; Pay group = ' || a.PAYGROUP || '; Duplicate of paycheck nbr = '|| PAYCHECK_NBR || '; Count of paycheck nbr = '|| COUNT(a.PAYCHECK_NBR) ) as KEY_DATA  from SYSADM.ps_pay_check a  join SYSADM.ps_pay_form_tbl b on (a.form_id=b.form_id)  where a.paycheck_status <> 'r'  group by a.form_id, a. company, a.paygroup, a.paycheck_nbr  having count(a.paycheck_nbr) > 1  ) having count(*) >= 1) s]]>
+        </SQLQuery>
+        <IsInclude>1</IsInclude>
+            <InUse>1</InUse>
+            <DBQueryFieldList>
+                <DBPatternSeqField>entrytime</DBPatternSeqField>
+                <DBPatternField>
+                    <DBQueryColName>sensor</DBQueryColName>
+                    <FieldName>udfs1</FieldName>
+                </DBPatternField>
+                <DBPatternField>
+                    <DBQueryColName>entrytime</DBQueryColName>
+                    <FieldName>time</FieldName>
+                </DBPatternField>
+                <DBPatternField>
+                                        <DBQueryColName>KEY_DATA</DBQueryColName>
+                                        <FieldName>data</FieldName>
+                                   </DBPatternField>
+            </DBQueryFieldList>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+            </DBPattern>
+    </Patterns>
+        <TagConditions>
+            <TagCondition operator="CONTAINS_REGEX" field="udfs1" alertRuleVisible="0">
+                <ConditionValues>
+                    <ConditionValue>%</ConditionValue>
+                </ConditionValues>
+                <ConditionTags tagField="mtag">
+                    <ConditionTag>#medium_severity_sensor</ConditionTag>
+                </ConditionTags>
+                <IsSystem>0</IsSystem>
+                <IsEnabled>1</IsEnabled>
+            </TagCondition>
+        </TagConditions>
+        <IsHidden>0</IsHidden>
+        <IsSMAEnabled>0</IsSMAEnabled>
+    </Source>
+    <FieldNameMaps>
+        <FieldNameMap>
+            <Name>udfs1</Name>
+            <DisplayName>sensor</DisplayName>
+        </FieldNameMap>
+        
+    </FieldNameMaps>
+</LoganContent>

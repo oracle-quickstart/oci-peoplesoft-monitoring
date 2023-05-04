@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LoganContent oms_version="2.50.2.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1650039506307" content_version="2.50.2.0.0" xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd">
+    <Field oms_version="2.50.2.0.0">
+        <DisplayName>sensor</DisplayName>
+        <FieldType>1</FieldType>
+        <IsSystem>0</IsSystem>
+        <IsPrimary>1</IsPrimary>
+        <DataType>STRING</DataType>
+        <IsMetricKeyEligible>0</IsMetricKeyEligible>
+        <IsMetricValueEligible>0</IsMetricValueEligible>
+        <FacetEligible>1</FacetEligible>
+        <RangeFacetEligible>0</RangeFacetEligible>
+        <TableEligible>1</TableEligible>
+        <FacetPriority>1</FacetPriority>
+        <Summarizable>1</Summarizable>
+        <HighCardinality>1</HighCardinality>
+        <LargeData>0</LargeData>
+        <MultiValued>0</MultiValued>
+        <SMAEnabledSetting>0</SMAEnabledSetting>
+    </Field>
+    
+    <Tag>
+<Name>#low_severity_sensor</Name>
+<DisplayName>Low Severity Sensor</DisplayName>
+<IsSystem>0</IsSystem>
+<ProblemPriority>LOW</ProblemPriority>
+</Tag>
+    <Source name="PSFT Sensor: Credit History process showing strange inconsistencies - Weekly" oms_version="2.50.2.0.0" configWarningSettings="0">
+    <SourceType>database_sql</SourceType>
+    <TargetTypes>
+        <TargetType>omc_oracle_db_instance</TargetType>
+        <TargetType>omc_oracle_pdb</TargetType>
+    </TargetTypes>
+    <DisplayName>PSFT Sensor: Credit History process showing strange inconsistencies - Weekly</DisplayName>
+    <Description><![CDATA[The Cre History process shows strange inconsistencies from accounts concerning 8/8/2016 transactions surrounding the 
+removal of late payment fees. It app]]></Description>
+    <IsSystem>0</IsSystem>
+    <IsSecureContent>1</IsSecureContent>
+    <Patterns>
+        <DBPattern dateTimeField="entrytime" dateTimeColumns="entrytime">
+        <SQLQuery>
+            <![CDATA[select 'PSFT_CS_SF_CREDITHISTORY_ACCTNBR' sensor, to_timestamp(to_char(sysdate, 'YYYY-MM-DD hh24:mi:ss'), 'YYYY-MM-DD hh24:mi:ss') entrytime, s.KEY_DATA FROM (Select count(*) || ' Account Found In PS_ITEM_LINE_SF Not Matching With The Account in PS_ITEM_SF' as KEY_DATA,   'Review KM Doc ID 656449.1 To Identify the Issue and To Resolve It' As Solution,   'Y' as EVENT FROM (   SELECT a.emplid       , a.account_term as "item_sf.account_term"       , b.account_term as "item_line.account_term"       , a.account_nbr as "item_sf.acct"       , b.account_nbr as "item_line.acct"       , a.item_type       , a.item_nbr       , a.item_amt       , b.line_amt       , b.line_seq_nbr   FROM SYSADM.PS_Item_sf A     , SYSADM.PS_item_line_sf B   WHERE a.business_unit = b.business_unit     and a.common_id = b.common_id     and a.sa_id_type = b.sa_id_type     and a.item_nbr = b.item_nbr     and a.account_nbr <> b.account_nbr   ) HAVING COUNT(*) > 0) s]]>
+        </SQLQuery>
+        <IsInclude>1</IsInclude>
+            <InUse>1</InUse>
+            <DBQueryFieldList>
+                <DBPatternSeqField>entrytime</DBPatternSeqField>
+                <DBPatternField>
+                    <DBQueryColName>sensor</DBQueryColName>
+                    <FieldName>udfs1</FieldName>
+                </DBPatternField>
+                <DBPatternField>
+                    <DBQueryColName>entrytime</DBQueryColName>
+                    <FieldName>time</FieldName>
+                </DBPatternField>
+                <DBPatternField>
+                                        <DBQueryColName>KEY_DATA</DBQueryColName>
+                                        <FieldName>data</FieldName>
+                                   </DBPatternField>
+            </DBQueryFieldList>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+            </DBPattern>
+    </Patterns>
+        <TagConditions>
+            <TagCondition operator="CONTAINS_REGEX" field="udfs1" alertRuleVisible="0">
+                <ConditionValues>
+                    <ConditionValue>%</ConditionValue>
+                </ConditionValues>
+                <ConditionTags tagField="mtag">
+                    <ConditionTag>#low_severity_sensor</ConditionTag>
+                </ConditionTags>
+                <IsSystem>0</IsSystem>
+                <IsEnabled>1</IsEnabled>
+            </TagCondition>
+        </TagConditions>
+        <IsHidden>0</IsHidden>
+        <IsSMAEnabled>0</IsSMAEnabled>
+    </Source>
+    <FieldNameMaps>
+        <FieldNameMap>
+            <Name>udfs1</Name>
+            <DisplayName>sensor</DisplayName>
+        </FieldNameMap>
+        
+    </FieldNameMaps>
+</LoganContent>
