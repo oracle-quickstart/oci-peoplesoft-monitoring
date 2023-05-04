@@ -7,6 +7,7 @@ PSFT Sensor: Award Entry Posting Error - Weekly,WEEK,SAT,12
 PSFT Sensor: Error Trying to Access Student Program Plan Component - Monthly,MONTH,1:LAST,12
 PSFT Sensor: Credit History process showing strange inconsistencies - Weekly,WEEK,SAT,12
 PSFT Sensor: Dropping a course and enrolling again for same course fees aren't assessed - Monthly,MONTH,LAST,12
+PSFT Sensor: Benefits Administration Start Date is two years older than the current date - Monthly,MONTH,1,12
 PSFT Sensor: Error posting awards on FA - Weekly,WEEK,MON,12
 PSFT Sensor: Old time exceptions - Monthly,MONTH,1,12
 PSFT Sensor: Benefit Program orphan records - Daily,DAY,1,12
