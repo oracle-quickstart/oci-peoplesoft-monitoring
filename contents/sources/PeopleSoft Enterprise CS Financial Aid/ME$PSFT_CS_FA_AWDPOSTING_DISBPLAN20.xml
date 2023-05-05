@@ -38,7 +38,7 @@
     <Patterns>
         <DBPattern dateTimeField="entrytime" dateTimeColumns="entrytime">
         <SQLQuery>
-            <![CDATA[select 'PSFT_CS_FA_AWDPOSTING_DISBPLAN20' sensor, to_timestamp(to_char(sysdate, 'YYYY-MM-DD hh24:mi:ss'), 'YYYY-MM-DD hh24:mi:ss') entrytime, s.KEY_DATA FROM (Select 'Review ' || count() || ' Student(s) Who Reached a Maximum Number of Disbursement Plans' as key_data, 'Refer to Doc ID 2940421.1 For a Solution' as solution, 'Y' as event  From  (  Select EMPLID, INSTITUTION, AID_YEAR, count()  From SYSADM.ps_STDNT_AWD_PKG  Where offer_amount <> 0  Group By EMPLID, INSTITUTION, AID_YEAR  Having count(*) > 20  )  having count(*) > 0) s]]>
+            <![CDATA[select 'PSFT_CS_FA_AWDPOSTING_DISBPLAN20' sensor, to_timestamp(to_char(sysdate, 'YYYY-MM-DD hh24:mi:ss'), 'YYYY-MM-DD hh24:mi:ss') entrytime, s.KEY_DATA FROM (Select 'Review ' || count(*) || ' Student(s) Who Reached a Maximum Number of Disbursement Plans' as KEY_DATA, 'Refer to Doc ID 2940421.1 For a Solution' as SOLUTION, 'Y' as EVENT  From  (  Select EMPLID, INSTITUTION, AID_YEAR, count(*)  From SYSADM.ps_STDNT_AWD_PKG  Where offer_amount <> 0  Group By EMPLID, INSTITUTION, AID_YEAR  Having count(*) > 20  )  having count(*) > 0) s]]>
         </SQLQuery>
         <IsInclude>1</IsInclude>
             <InUse>1</InUse>
