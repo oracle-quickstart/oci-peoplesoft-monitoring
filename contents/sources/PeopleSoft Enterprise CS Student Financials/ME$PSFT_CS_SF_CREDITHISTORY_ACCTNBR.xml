@@ -55,7 +55,7 @@ removal of late payment fees. It app]]></Description>
                 </DBPatternField>
                 <DBPatternField>
                                         <DBQueryColName>KEY_DATA</DBQueryColName>
-                                        <FieldName>data</FieldName>
+                                        <FieldName>probkey</FieldName>
                                    </DBPatternField>
             </DBQueryFieldList>
             <IsSystem>0</IsSystem>
