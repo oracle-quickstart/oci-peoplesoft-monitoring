@@ -1,0 +1,76 @@
+Name,Recurrence Pattern Unit,Recurrence Pattern Value,Start Hour
+PSFT Sensor: MPN data is in CRDL file and shows in View COD Data but is not showing in Manage Dir Loan Ap - Weekly,WEEK,SAT,12
+PSFT Sensor: Zero dollar paychecks - Weekly,WEEK,MON,12
+PSFT Sensor: Process SDPTREC errors causing accounting entries to not publish to Financials - Monthly,MONTH,1,12
+PSFT Sensor: Student on Credit History because the ACCOUNT TERM value is unequal on ITEM SF tables - Weekly,WEEK,SAT,12
+PSFT Sensor: Award Entry Posting Error - Weekly,WEEK,SAT,12
+PSFT Sensor: Error Trying to Access Student Program Plan Component - Monthly,MONTH,1:LAST,12
+PSFT Sensor: Credit History process showing strange inconsistencies - Weekly,WEEK,SAT,12
+PSFT Sensor: Dropping a course and enrolling again for same course fees aren't assessed - Monthly,MONTH,LAST,12
+PSFT Sensor: Benefits Administration Start Date is two years older than the current date - Monthly,MONTH,1,12
+PSFT Sensor: Error posting awards on FA - Weekly,WEEK,MON,12
+PSFT Sensor: Old time exceptions - Monthly,MONTH,1,12
+PSFT Sensor: Benefit Program orphan records - Daily,DAY,1,12
+PSFT Sensor: Document sequence range unmapped or incomplete - Daily,DAY,1,12
+PSFT Sensor: Invalid array field types or PIN mismatch - Weekly,WEEK,SUN,12
+PSFT Sensor: Bill rows stuck - Daily,DAY,1,1
+PSFT Sensor: Invalid fields in array record definition - Weekly,WEEK,SUN,12
+PSFT Sensor: Process list not referenced - Weekly,WEEK,SUN,12
+PSFT Sensor: Implementation Test - Minute,MIN,1,12
+PSFT Sensor: PIN Code or PIN Name or space or country mismatch - Weekly,WEEK,SUN,12
+PSFT Sensor: Indexes not rebuilt after chartfield config process - Monthly,MONTH,1,1
+PSFT Sensor: IB transactions stuck - Daily,DAY,1,1
+PSFT Sensor: No rows in stream for GP Calendar - Weekly,WEEK,SUN,12
+PSFT Sensor: Vouchers stuck in processing - Daily,DAY,1,1
+PSFT Sensor: Incurrent revenue rows stuck - Daily,DAY,1,1
+PSFT Sensor: Duplicate pay check number - Daily,DAY,1,12
+PSFT Sensor: CODIN FAPCODIN Created Data in PS LOAN DISB MSG table with LN DISB SEQ NBR equal to 0 - Weekly,WEEK,SAT,12
+PSFT Sensor: Direct reports table check - Daily,DAY,1,12
+PSFT Sensor: New Year time zone offsets not generated - Monthly,MONTH,10,12
+PSFT Sensor: Stuck requisitions - Weekly,WEEK,MON,12
+PSFT Sensor: New Year Calendar not built - Monthly,MONTH,12,12
+PSFT Sensor: How to Publish a specific Student Financial Accounting Entry Journal to FMS - Monthly,MONTH,1,12
+PSFT Sensor: Formulas not validated - Weekly,WEEK,SUN,12
+PSFT Sensor: Class roster enrollment control mismatch - Daily,DAY,1,12
+PSFT Sensor: Incomplete Vouchers - Weekly,WEEK,MON,1
+PSFT Sensor: Elements with same PIN code - Weekly,WEEK,SUN,12
+PSFT Sensor: Corrupted data rows in ledger - Monthly,MONTH,1,1
+PSFT Sensor: Missing depreciation amount  - Daily,DAY,1,12
+PSFT Sensor: Flexible Spending Account not connected to benefit plan - Daily,DAY,1,12
+PSFT Sensor: Incorrect tax data setup - Daily,DAY,1,12
+PSFT Sensor: PUM Image 26 Create Extract process - Weekly,WEEK,SAT,12
+PSFT Sensor: Manage classes Enroll by my requirement Fluid error - Weekly,WEEK,SAT,12
+PSFT Sensor: Funding array exceeded  - Daily,DAY,1,12
+PSFT Sensor: Process list has no sections - Weekly,WEEK,SUN,12
+PSFT Sensor: ER DD AT are part of the Sections which are not part of any Element Group - Weekly,WEEK,SUN,12
+PSFT Sensor: Maximum Disbursement Plans was Exceeded Error - Weekly,WEEK,SUN,12
+PSFT Sensor: Inexistent record field combination referenced - Weekly,WEEK,SUN,12
+PSFT Sensor: New Year time periods not defined - Monthly,MONTH,12,12
+PSFT Sensor: Parent and Child country mismatch - Weekly,WEEK,SUN,12
+PSFT Sensor: Used by and Country field mismatch - Weekly,WEEK,SUN,12
+PSFT Sensor: Conflicting retro triggers for employee - Weekly,WEEK,SUN,12
+PSFT Sensor: These elements ER DD AT are part of an element group - Weekly,WEEK,SUN,12
+PSFT Sensor: Missing tax form definition - Daily,DAY,1,12
+PSFT Sensor: Invalid email address - Weekly,WEEK,MON,12
+PSFT Sensor: PIA Cache Generated HTML box checked - Daily,DAY,1,12
+PSFT Sensor: Stuck POs  - Weekly,WEEK,MON,12
+PSFT Sensor: Unposted Vouchers - Daily,DAY,1,1
+PSFT Sensor: Pricing transactions stuck - Daily,DAY,1,1
+PSFT Sensor: Parent and Child Industry mismatch - Weekly,WEEK,SUN,12
+PSFT Sensor: Potential EDI Export Process Failures - Daily,DAY,1,12
+PSFT Sensor: Missing temporary tables - Daily,DAY,1,1
+PSFT Sensor: Array Keys do not exist in record definition - Weekly,WEEK,SUN,12
+PSFT Sensor: COBRA orphan records - Daily,DAY,1,12
+PSFT Sensor: Tax data and payline do not reconcile - Weekly,WEEK,MON,12
+PSFT Sensor: Chartfield configuration out of sync - Monthly,MONTH,1,12
+PSFT Sensor: Employee retro calculation date mismatch - Weekly,WEEK,SUN,12
+PSFT Sensor: Unmatched financial details in header and line - Daily,DAY,1,12
+PSFT Sensor: Invalid Fields in Array record definition - Weekly,WEEK,SUN,12
+PSFT Sensor: Elements with duplicate names - Weekly,WEEK,SUN,12
+PSFT Sensor: Financial Aid Term Mismatch - Daily,DAY,1,12
+PSFT Sensor: Duplicate PIN code - Weekly,WEEK,MON,12
+PSFT Sensor: Paygroup calendar not found - Weekly,WEEK,SUN,12
+PSFT Sensor: EOAW data discrepancy - Weekly,WEEK,MON,1
+PSFT Sensor: Elements unreferenced on other elements definitions - Weekly,WEEK,SUN,12
+PSFT Sensor: Benefit Admin orphan data - Daily,DAY,1,12
+PSFT Sensor: Groups not referenced - Weekly,WEEK,SUN,12

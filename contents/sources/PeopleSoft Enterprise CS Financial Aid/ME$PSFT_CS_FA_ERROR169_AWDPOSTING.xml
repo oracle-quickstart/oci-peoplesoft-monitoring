@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LoganContent oms_version="2.50.2.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1650039506307" content_version="2.50.2.0.0" xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd">
+    <Field oms_version="2.50.2.0.0">
+        <DisplayName>sensor</DisplayName>
+        <FieldType>1</FieldType>
+        <IsSystem>0</IsSystem>
+        <IsPrimary>1</IsPrimary>
+        <DataType>STRING</DataType>
+        <IsMetricKeyEligible>0</IsMetricKeyEligible>
+        <IsMetricValueEligible>0</IsMetricValueEligible>
+        <FacetEligible>1</FacetEligible>
+        <RangeFacetEligible>0</RangeFacetEligible>
+        <TableEligible>1</TableEligible>
+        <FacetPriority>1</FacetPriority>
+        <Summarizable>1</Summarizable>
+        <HighCardinality>1</HighCardinality>
+        <LargeData>0</LargeData>
+        <MultiValued>0</MultiValued>
+        <SMAEnabledSetting>0</SMAEnabledSetting>
+    </Field>
+    
+    <Tag>
+<Name>#low_severity_sensor</Name>
+<DisplayName>Low Severity Sensor</DisplayName>
+<IsSystem>0</IsSystem>
+<ProblemPriority>LOW</ProblemPriority>
+</Tag>
+    <Source name="PSFT Sensor: Award Entry Posting Error - Weekly" oms_version="2.50.2.0.0" configWarningSettings="0">
+    <SourceType>database_sql</SourceType>
+    <TargetTypes>
+        <TargetType>omc_oracle_db_instance</TargetType>
+        <TargetType>omc_oracle_pdb</TargetType>
+    </TargetTypes>
+    <DisplayName>PSFT Sensor: Award Entry Posting Error - Weekly</DisplayName>
+    <Description><![CDATA[Student validates on award entry but when you try to post it ends in posting encountered errors.  I noticed that the PLUS loan was missing an aggregate le]]></Description>
+    <IsSystem>0</IsSystem>
+    <IsSecureContent>1</IsSecureContent>
+    <Patterns>
+        <DBPattern dateTimeField="entrytime" dateTimeColumns="entrytime">
+        <SQLQuery>
+            <![CDATA[select 'PSFT_CS_FA_ERROR169_AWDPOSTING' sensor, to_timestamp(to_char(sysdate, 'YYYY-MM-DD hh24:mi:ss'), 'YYYY-MM-DD hh24:mi:ss') entrytime, s.KEY_DATA FROM (SELECT 'Review ' || count(*) || ' Financial Aid term row(s) being awarded for one or more item types.' as KEY_DATA,   'KM Doc ID 2920351.1 to resolve this issue.' as SOLUTION,   'Y' as EVENT  FROM  (SELECT A.EMPLID, A.INSTITUTION, A.AID_YEAR, A.ITEM_TYPE, A.ACAD_CAREER  FROM SYSADM.PS_STDNT_AWRD_DISB A, SYSADM.PS_STDNT_FA_TERM B  WHERE A.AID_YEAR >= (Select AID_YEAR  FROM SYSADM.PS_AID_YEAR_TBL  WHERE INSTITUTION = A.INSTITUTION  AND ACAD_YEAR_START <= SYSDATE AND ACAD_YEAR_END >= SYSDATE)  AND A.OFFER_BALANCE > 0  AND A.EMPLID = B.EMPLID  AND A.INSTITUTION = B.INSTITUTION  AND B.STRM = A.STRM  AND B.EFFDT =  (SELECT MAX(B_ED.EFFDT) FROM SYSADM.PS_STDNT_FA_TERM B_ED  WHERE B.EMPLID = B_ED.EMPLID  AND B.INSTITUTION = B_ED.INSTITUTION  AND B.STRM = B_ED.STRM  AND B_ED.EFFDT <= SYSDATE)  AND B.EFFSEQ =  (SELECT MAX(B_ES.EFFSEQ) FROM SYSADM.PS_STDNT_FA_TERM B_ES  WHERE B.EMPLID = B_ES.EMPLID  AND B.INSTITUTION = B_ES.INSTITUTION  AND B.STRM = B_ES.STRM  AND B.EFFDT = B_ES.EFFDT)  AND ( B.EFF_STATUS = 'I'  OR A.AID_YEAR <> B.AID_YEAR  OR A.ACAD_CAREER <> B.ACAD_CAREER))  HAVING COUNT(*) > 0) s]]>
+        </SQLQuery>
+        <IsInclude>1</IsInclude>
+            <InUse>1</InUse>
+            <DBQueryFieldList>
+                <DBPatternSeqField>entrytime</DBPatternSeqField>
+                <DBPatternField>
+                    <DBQueryColName>sensor</DBQueryColName>
+                    <FieldName>udfs1</FieldName>
+                </DBPatternField>
+                <DBPatternField>
+                    <DBQueryColName>entrytime</DBQueryColName>
+                    <FieldName>time</FieldName>
+                </DBPatternField>
+                <DBPatternField>
+                                        <DBQueryColName>KEY_DATA</DBQueryColName>
+                                        <FieldName>data</FieldName>
+                                   </DBPatternField>
+            </DBQueryFieldList>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+            </DBPattern>
+    </Patterns>
+        <TagConditions>
+            <TagCondition operator="CONTAINS_REGEX" field="udfs1" alertRuleVisible="0">
+                <ConditionValues>
+                    <ConditionValue>%</ConditionValue>
+                </ConditionValues>
+                <ConditionTags tagField="mtag">
+                    <ConditionTag>#low_severity_sensor</ConditionTag>
+                </ConditionTags>
+                <IsSystem>0</IsSystem>
+                <IsEnabled>1</IsEnabled>
+            </TagCondition>
+        </TagConditions>
+        <IsHidden>0</IsHidden>
+        <IsSMAEnabled>0</IsSMAEnabled>
+    </Source>
+    <FieldNameMaps>
+        <FieldNameMap>
+            <Name>udfs1</Name>
+            <DisplayName>sensor</DisplayName>
+        </FieldNameMap>
+        
+    </FieldNameMaps>
+</LoganContent>

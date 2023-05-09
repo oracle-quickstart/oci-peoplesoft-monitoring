@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LoganContent oms_version="2.50.2.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1650039506307" content_version="2.50.2.0.0" xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd">
+    <Field oms_version="2.50.2.0.0">
+        <DisplayName>sensor</DisplayName>
+        <FieldType>1</FieldType>
+        <IsSystem>0</IsSystem>
+        <IsPrimary>1</IsPrimary>
+        <DataType>STRING</DataType>
+        <IsMetricKeyEligible>0</IsMetricKeyEligible>
+        <IsMetricValueEligible>0</IsMetricValueEligible>
+        <FacetEligible>1</FacetEligible>
+        <RangeFacetEligible>0</RangeFacetEligible>
+        <TableEligible>1</TableEligible>
+        <FacetPriority>1</FacetPriority>
+        <Summarizable>1</Summarizable>
+        <HighCardinality>1</HighCardinality>
+        <LargeData>0</LargeData>
+        <MultiValued>0</MultiValued>
+        <SMAEnabledSetting>0</SMAEnabledSetting>
+    </Field>
+    
+    <Tag>
+<Name>#medium_severity_sensor</Name>
+<DisplayName>Medium Severity Sensor</DisplayName>
+<IsSystem>0</IsSystem>
+<ProblemPriority>MEDIUM</ProblemPriority>
+</Tag>
+    <Source name="PSFT Sensor: Bill rows stuck - Daily" oms_version="2.50.2.0.0" configWarningSettings="0">
+    <SourceType>database_sql</SourceType>
+    <TargetTypes>
+        <TargetType>omc_oracle_db_instance</TargetType>
+        <TargetType>omc_oracle_pdb</TargetType>
+    </TargetTypes>
+    <DisplayName>PSFT Sensor: Bill rows stuck - Daily</DisplayName>
+    <Description><![CDATA[]]></Description>
+    <IsSystem>0</IsSystem>
+    <IsSecureContent>1</IsSecureContent>
+    <Patterns>
+        <DBPattern dateTimeField="entrytime" dateTimeColumns="entrytime">
+        <SQLQuery>
+            <![CDATA[select 'PSFT_FIN_PA_CA_BI_INTFC' sensor, to_timestamp(to_char(sysdate, 'YYYY-MM-DD hh24:mi:ss'), 'YYYY-MM-DD hh24:mi:ss') entrytime, s.KEY_DATA FROM (select 'Y' as EVENT  , count(*) || ' Incurred Bill rows or Bill Plans stuck in process and need your attention' as KEY_DATA  ,'Please review the following documents: How to Reset As-incurred Project Transactions To Send To Billing From Contracts (Doc ID 665012.1) and ECA-How To Reset A Contract Bill Plan If The PS_INTFC_BI Has An Error? (Doc ID 616495.1)' AS SOLUTION  from (  SELECT 'Total number of As Incurred Bill rows stuck in process and need your attention: ' || COUNT(*) AS KEY_DATA  FROM SYSADM.PS_PROJ_RESOURCE A  WHERE A.BI_DISTRIB_STATUS ='S'  AND ( (A.PROCESS_INSTANCE IN (SELECT B.PROCESS_INSTANCE FROM SYSADM.PS_PROJ_RESOURCE B, SYSADM.PSPRCSRQST C  WHERE B.PROCESS_INSTANCE = C.PRCSINSTANCE AND C.RUNSTATUS NOT IN (7) AND C.PRCSNAME <> 'CA_BI_INTFC' ))  OR (A.PROCESS_INSTANCE NOT IN (SELECT D.PROCESS_INSTANCE FROM SYSADM.PS_PROJ_RESOURCE D, SYSADM.PSPRCSRQST E  WHERE D.PROCESS_INSTANCE = E.PRCSINSTANCE)))  UNION  SELECT 'Total number of Bill Plans (As-incurred, Recurring or Other) in process and need your attention: ' || COUNT(*) AS KEY_DATA  FROM SYSADM.PS_CA_BILL_PLAN A  WHERE A.PROCESS_INSTANCE <> 0  AND ( (A.PROCESS_INSTANCE IN (SELECT B.PROCESS_INSTANCE FROM SYSADM.PS_CA_BILL_PLAN B, SYSADM.PSPRCSRQST C  WHERE B.PROCESS_INSTANCE = C.PRCSINSTANCE AND C.RUNSTATUS NOT IN (7) AND C.PRCSNAME <> 'CA_BI_INTFC' ))  OR (A.PROCESS_INSTANCE NOT IN (SELECT D.PROCESS_INSTANCE FROM SYSADM.PS_CA_BILL_PLAN D, SYSADM.PSPRCSRQST E  WHERE D.PROCESS_INSTANCE = E.PRCSINSTANCE)))  ) having count(*) >= 1) s]]>
+        </SQLQuery>
+        <IsInclude>1</IsInclude>
+            <InUse>1</InUse>
+            <DBQueryFieldList>
+                <DBPatternSeqField>entrytime</DBPatternSeqField>
+                <DBPatternField>
+                    <DBQueryColName>sensor</DBQueryColName>
+                    <FieldName>udfs1</FieldName>
+                </DBPatternField>
+                <DBPatternField>
+                    <DBQueryColName>entrytime</DBQueryColName>
+                    <FieldName>time</FieldName>
+                </DBPatternField>
+                <DBPatternField>
+                                        <DBQueryColName>KEY_DATA</DBQueryColName>
+                                        <FieldName>data</FieldName>
+                                   </DBPatternField>
+            </DBQueryFieldList>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+            </DBPattern>
+    </Patterns>
+        <TagConditions>
+            <TagCondition operator="CONTAINS_REGEX" field="udfs1" alertRuleVisible="0">
+                <ConditionValues>
+                    <ConditionValue>%</ConditionValue>
+                </ConditionValues>
+                <ConditionTags tagField="mtag">
+                    <ConditionTag>#medium_severity_sensor</ConditionTag>
+                </ConditionTags>
+                <IsSystem>0</IsSystem>
+                <IsEnabled>1</IsEnabled>
+            </TagCondition>
+        </TagConditions>
+        <IsHidden>0</IsHidden>
+        <IsSMAEnabled>0</IsSMAEnabled>
+    </Source>
+    <FieldNameMaps>
+        <FieldNameMap>
+            <Name>udfs1</Name>
+            <DisplayName>sensor</DisplayName>
+        </FieldNameMap>
+        
+    </FieldNameMaps>
+</LoganContent>

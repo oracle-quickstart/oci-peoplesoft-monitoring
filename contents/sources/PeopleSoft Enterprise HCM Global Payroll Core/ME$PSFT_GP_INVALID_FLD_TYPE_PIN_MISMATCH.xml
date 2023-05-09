@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LoganContent oms_version="2.50.2.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1650039506307" content_version="2.50.2.0.0" xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd">
+    <Field oms_version="2.50.2.0.0">
+        <DisplayName>sensor</DisplayName>
+        <FieldType>1</FieldType>
+        <IsSystem>0</IsSystem>
+        <IsPrimary>1</IsPrimary>
+        <DataType>STRING</DataType>
+        <IsMetricKeyEligible>0</IsMetricKeyEligible>
+        <IsMetricValueEligible>0</IsMetricValueEligible>
+        <FacetEligible>1</FacetEligible>
+        <RangeFacetEligible>0</RangeFacetEligible>
+        <TableEligible>1</TableEligible>
+        <FacetPriority>1</FacetPriority>
+        <Summarizable>1</Summarizable>
+        <HighCardinality>1</HighCardinality>
+        <LargeData>0</LargeData>
+        <MultiValued>0</MultiValued>
+        <SMAEnabledSetting>0</SMAEnabledSetting>
+    </Field>
+    
+    <Tag>
+<Name>#medium_severity_sensor</Name>
+<DisplayName>Medium Severity Sensor</DisplayName>
+<IsSystem>0</IsSystem>
+<ProblemPriority>MEDIUM</ProblemPriority>
+</Tag>
+    <Source name="PSFT Sensor: Invalid array field types or PIN mismatch - Weekly" oms_version="2.50.2.0.0" configWarningSettings="0">
+    <SourceType>database_sql</SourceType>
+    <TargetTypes>
+        <TargetType>omc_oracle_db_instance</TargetType>
+        <TargetType>omc_oracle_pdb</TargetType>
+    </TargetTypes>
+    <DisplayName>PSFT Sensor: Invalid array field types or PIN mismatch - Weekly</DisplayName>
+    <Description><![CDATA[]]></Description>
+    <IsSystem>0</IsSystem>
+    <IsSecureContent>1</IsSecureContent>
+    <Patterns>
+        <DBPattern dateTimeField="entrytime" dateTimeColumns="entrytime">
+        <SQLQuery>
+            <![CDATA[select 'PSFT_GP_INVALID_FLD_TYPE_PIN_MISMATCH' sensor, to_timestamp(to_char(sysdate, 'YYYY-MM-DD hh24:mi:ss'), 'YYYY-MM-DD hh24:mi:ss') entrytime, s.KEY_DATA FROM (select 'Y' as EVENT  , count(*) || ' Field Type and PIN mismatches' as KEY_DATA  , 'PSFT Global Payroll - Invalid Array Field Types And PIN Mismatches Or If Pointer Is Used The Field Name Needs To Be PIN_NUM (Doc ID 2576632.1)' AS SOLUTION  from (  SELECT DISTINCT  ('Record Name = ' || E1.RECNAME ||  '; PIN Number = ' || E1.PIN_NUM ||  '; Element Name = ' || E3.PIN_NM ||  '; Field Name = ' || E2.FIELDNAME ||  '; Element for Target Value = ' || E2.PIN_VAR_NUM ||  '; Element Name = ' || E4.PIN_NM ||  '; Field Format = ' || E3.FLD_FMT ||  '; Field Type = ' || E5.FIELDTYPE ||  '; Country = ' || E3.COUNTRY) AS KEY_DATA  FROM SYSADM.PS_GP_ARRAY E1,  SYSADM.PS_GP_ARRAY_FLD E2,  SYSADM.PS_GP_PIN E3,  SYSADM.PS_GP_PIN E4,  SYSADM.PSDBFIELD E5  WHERE E1.PIN_NUM = E2.PIN_NUM  AND E2.PIN_NUM = E3.PIN_NUM  AND E2.PIN_VAR_NUM = E4.PIN_NUM  AND E2.FIELDNAME = E5.FIELDNAME  AND ((E4.FLD_FMT = '1' AND E5.FIELDTYPE <> '0')  OR (E4.FLD_FMT = '2' AND E5.FIELDTYPE <> '4')  OR (E4.FLD_FMT IN ('3', '4') AND E5.FIELDTYPE NOT IN ('2', '3') )  OR (E4.FLD_FMT = '5' AND (E2.ARRAY_FLD_USE <> 'E' OR E5.FIELDTYPE NOT IN ('2','3') ) ))  AND EXISTS (SELECT 'X' FROM SYSADM.PSRECDEFN  WHERE RECNAME = E1.RECNAME)  ) having count(*) >= 1) s]]>
+        </SQLQuery>
+        <IsInclude>1</IsInclude>
+            <InUse>1</InUse>
+            <DBQueryFieldList>
+                <DBPatternSeqField>entrytime</DBPatternSeqField>
+                <DBPatternField>
+                    <DBQueryColName>sensor</DBQueryColName>
+                    <FieldName>udfs1</FieldName>
+                </DBPatternField>
+                <DBPatternField>
+                    <DBQueryColName>entrytime</DBQueryColName>
+                    <FieldName>time</FieldName>
+                </DBPatternField>
+                <DBPatternField>
+                                        <DBQueryColName>KEY_DATA</DBQueryColName>
+                                        <FieldName>data</FieldName>
+                                   </DBPatternField>
+            </DBQueryFieldList>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+            </DBPattern>
+    </Patterns>
+        <TagConditions>
+            <TagCondition operator="CONTAINS_REGEX" field="udfs1" alertRuleVisible="0">
+                <ConditionValues>
+                    <ConditionValue>%</ConditionValue>
+                </ConditionValues>
+                <ConditionTags tagField="mtag">
+                    <ConditionTag>#medium_severity_sensor</ConditionTag>
+                </ConditionTags>
+                <IsSystem>0</IsSystem>
+                <IsEnabled>1</IsEnabled>
+            </TagCondition>
+        </TagConditions>
+        <IsHidden>0</IsHidden>
+        <IsSMAEnabled>0</IsSMAEnabled>
+    </Source>
+    <FieldNameMaps>
+        <FieldNameMap>
+            <Name>udfs1</Name>
+            <DisplayName>sensor</DisplayName>
+        </FieldNameMap>
+        
+    </FieldNameMaps>
+</LoganContent>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LoganContent oms_version="2.50.2.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1650039506307" content_version="2.50.2.0.0" xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd">
+    <Field oms_version="2.50.2.0.0">
+        <DisplayName>sensor</DisplayName>
+        <FieldType>1</FieldType>
+        <IsSystem>0</IsSystem>
+        <IsPrimary>1</IsPrimary>
+        <DataType>STRING</DataType>
+        <IsMetricKeyEligible>0</IsMetricKeyEligible>
+        <IsMetricValueEligible>0</IsMetricValueEligible>
+        <FacetEligible>1</FacetEligible>
+        <RangeFacetEligible>0</RangeFacetEligible>
+        <TableEligible>1</TableEligible>
+        <FacetPriority>1</FacetPriority>
+        <Summarizable>1</Summarizable>
+        <HighCardinality>1</HighCardinality>
+        <LargeData>0</LargeData>
+        <MultiValued>0</MultiValued>
+        <SMAEnabledSetting>0</SMAEnabledSetting>
+    </Field>
+    
+    <Tag>
+<Name>#medium_severity_sensor</Name>
+<DisplayName>Medium Severity Sensor</DisplayName>
+<IsSystem>0</IsSystem>
+<ProblemPriority>MEDIUM</ProblemPriority>
+</Tag>
+    <Source name="PSFT Sensor: Unposted Vouchers - Daily" oms_version="2.50.2.0.0" configWarningSettings="0">
+    <SourceType>database_sql</SourceType>
+    <TargetTypes>
+        <TargetType>omc_oracle_db_instance</TargetType>
+        <TargetType>omc_oracle_pdb</TargetType>
+    </TargetTypes>
+    <DisplayName>PSFT Sensor: Unposted Vouchers - Daily</DisplayName>
+    <Description><![CDATA[]]></Description>
+    <IsSystem>0</IsSystem>
+    <IsSecureContent>1</IsSecureContent>
+    <Patterns>
+        <DBPattern dateTimeField="entrytime" dateTimeColumns="entrytime">
+        <SQLQuery>
+            <![CDATA[select 'PSFT_AP_VOUCHERS_UNPOSTED' sensor, to_timestamp(to_char(sysdate, 'YYYY-MM-DD hh24:mi:ss'), 'YYYY-MM-DD hh24:mi:ss') entrytime, s.KEY_DATA FROM (select 'Y' as EVENT  , 'EAP: Payment Post / Voucher Post ABENDED at Step AP_PSTCOMMON.ACCOUNTS.Step05 with a "duplicate rows in a table with a UNIQUE index" Error. (Doc ID 622217.1)' as SOLUTION  , count(*) || ' Vouchers with existing Accrual/Closure Accounting Entries, or Vouchers with unposted Payments and existing Payment/Cancel Accounting Entries' as KEY_DATA  from (  SELECT 'Total number of Vouchers with existing Accruals/Closure Accounting Entries: ' || COUNT(*) as KEY_DATA  FROM SYSADM.PS_VOUCHER A  WHERE (A.BUSINESS_UNIT,A.VOUCHER_ID ) IN (SELECT DISTINCT B.BUSINESS_UNIT,B.VOUCHER_ID FROM SYSADM.PS_VOUCHER B, SYSADM.PS_VCHR_ACCTG_LINE C  WHERE A.BUSINESS_UNIT = B.BUSINESS_UNIT  AND A.VOUCHER_ID = B.VOUCHER_ID  AND B.BUSINESS_UNIT = C.BUSINESS_UNIT  AND B.VOUCHER_ID=C.VOUCHER_ID  AND (( B.POST_STATUS_AP = 'U'AND C.POSTING_PROCESS ='ACCR' AND C.UNPOST_SEQ = 0)  OR ( B.POST_STATUS_AP = 'P' AND B.PROCESS_MAN_CLOSE = 'Y' AND C.POSTING_PROCESS = 'CLOS')))  having count(*) >= 20  UNION  SELECT 'Total number of Vouchers with unposted Payments with existing Payment/Cancel Accounting Entries: ' || COUNT(*) as KEY_DATA  FROM SYSADM.PS_PYMNT_VCHR_XREF A  WHERE (A.BUSINESS_UNIT,A.VOUCHER_ID,A.PYMNT_CNT ) IN (SELECT DISTINCT B.BUSINESS_UNIT,B.VOUCHER_ID,B.PYMNT_CNT  FROM SYSADM.PS_PYMNT_VCHR_XREF B, SYSADM.PS_VCHR_ACCTG_LINE C ,SYSADM.PS_PAYMENT_TBL D  WHERE B.BUSINESS_UNIT = A.BUSINESS_UNIT  AND B.VOUCHER_ID = A.VOUCHER_ID  AND B.PYMNT_CNT = A.PYMNT_CNT  AND A.BUSINESS_UNIT = C.BUSINESS_UNIT  AND A.VOUCHER_ID = C.VOUCHER_ID  AND A.PYMNT_CNT = C.PYMNT_CNT  AND B.BUSINESS_UNIT = C.BUSINESS_UNIT  AND B.VOUCHER_ID = C.VOUCHER_ID  AND B.PYMNT_CNT = C.PYMNT_CNT  AND D.BANK_SETID = B.BANK_SETID  AND D.BANK_CD = B.BANK_CD  AND D.BANK_ACCT_KEY = B.BANK_ACCT_KEY  AND D.PYMNT_ID = B.PYMNT_ID  AND ((D.POST_STATUS_AP = 'U' and C.POSTING_PROCESS = 'PYMN')  OR (D.POST_STATUS_AP = 'P' and D.CANCEL_ACTION in ('R','C','H') AND C.POSTING_PROCESS='CANC' AND D.CANCEL_POST_STATUS ='W')))  having count(*) >= 20  )having count(*) >= 1) s]]>
+        </SQLQuery>
+        <IsInclude>1</IsInclude>
+            <InUse>1</InUse>
+            <DBQueryFieldList>
+                <DBPatternSeqField>entrytime</DBPatternSeqField>
+                <DBPatternField>
+                    <DBQueryColName>sensor</DBQueryColName>
+                    <FieldName>udfs1</FieldName>
+                </DBPatternField>
+                <DBPatternField>
+                    <DBQueryColName>entrytime</DBQueryColName>
+                    <FieldName>time</FieldName>
+                </DBPatternField>
+                <DBPatternField>
+                                        <DBQueryColName>KEY_DATA</DBQueryColName>
+                                        <FieldName>data</FieldName>
+                                   </DBPatternField>
+            </DBQueryFieldList>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+            </DBPattern>
+    </Patterns>
+        <TagConditions>
+            <TagCondition operator="CONTAINS_REGEX" field="udfs1" alertRuleVisible="0">
+                <ConditionValues>
+                    <ConditionValue>%</ConditionValue>
+                </ConditionValues>
+                <ConditionTags tagField="mtag">
+                    <ConditionTag>#medium_severity_sensor</ConditionTag>
+                </ConditionTags>
+                <IsSystem>0</IsSystem>
+                <IsEnabled>1</IsEnabled>
+            </TagCondition>
+        </TagConditions>
+        <IsHidden>0</IsHidden>
+        <IsSMAEnabled>0</IsSMAEnabled>
+    </Source>
+    <FieldNameMaps>
+        <FieldNameMap>
+            <Name>udfs1</Name>
+            <DisplayName>sensor</DisplayName>
+        </FieldNameMap>
+        
+    </FieldNameMaps>
+</LoganContent>
