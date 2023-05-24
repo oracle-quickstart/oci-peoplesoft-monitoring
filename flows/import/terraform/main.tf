@@ -10,6 +10,8 @@ locals {
   mgmtagent_dynamic_group_name = "Mgmtagent_Dynamicgroup_${local.timestamp}"
   mgmtagent_policy_name        = "Mgmtagent_Policies_${local.timestamp}"
   db_name                      = "${var.la_entity_name}"
+  target_system                = "peoplesoft"
+  kc_path                      = "../../../knowledge-content/${target_system}"
   log_group_name               = "PSFTDBLogs"
 }
 
@@ -177,13 +179,13 @@ module "logan_sources" {
   namespace = local.namespace
   compartment_id = var.resource_compartment
   for_each = toset(split(",", var.products))
-      path = format("%s/%s", "./contents/sources", each.value) 
+      path = format("%s/%s", "${kc_path}/log-sources", each.value) 
 }
 
 resource "null_resource" "import_lookups" {
   
   provisioner "local-exec" {
-    command = "python3 ./scripts/import_lookup.py -t Lookup -a ${var.auth_type} -p ${var.config_file_profile} -n \"PSFT Functional Sensors\" -f ./contents/lookups/PSFT_Lookup.csv"
+    command = "python3 ./scripts/import_lookup.py -t Lookup -a ${var.auth_type} -p ${var.config_file_profile} -n \"PSFT Functional Sensors\" -f ${kc_path}/logan-lookups/PSFT_Lookup.csv"
   }
 }
 
@@ -207,11 +209,11 @@ module "create_assoc" {
       config_file_profile = var.config_file_profile
       entity_compartment_id = var.resource_compartment
       entity_id = module.la_entity.entity_id
-      filepath = format("%s/%s", "./contents/sources", each.value)
+      filepath = format("%s/%s", "${kc_path}/log-sources", each.value)
       loggroup_id = var.create_log_group? oci_log_analytics_log_analytics_log_group.test_log_group[0].id : var.log_group_ocid
 }
 
 resource "oci_management_dashboard_management_dashboards_import" "multiple_dashboard_files" { 
   for_each = var.dashboard_files 
-    import_details = templatefile(format("%s/%s/%s", path.root,"contents/dashboards", each.value), {"compartment_ocid" : "${var.resource_compartment}"})
+    import_details = templatefile(format("%s/%s/%s", path.root,"${kc_path}/dashboards", each.value), {"compartment_ocid" : "${var.resource_compartment}"})
 }
