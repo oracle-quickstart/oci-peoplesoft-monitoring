@@ -54,7 +54,7 @@
                 </DBPatternField>
                 <DBPatternField>
                                         <DBQueryColName>KEY_DATA</DBQueryColName>
-                                        <FieldName>data</FieldName>
+                                        <FieldName>probkey</FieldName>
                                    </DBPatternField>
             </DBQueryFieldList>
             <IsSystem>0</IsSystem>
