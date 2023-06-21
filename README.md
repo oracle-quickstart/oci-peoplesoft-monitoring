@@ -10,6 +10,8 @@ This OCI Resource Manager stack creates an instance in the subnet from which PSF
 
 As part of this deployment, a compute instance is created and Oracle Cloud Agent is configured to collect log data. Users can select the PSFT products that they are using and PSFT sensor sources for those products are created. PSFT Database entity and source-entity associations are also created.  
 
+NOTE: The PeopleSoft Sensors do not extract Personal Information (PI) from any tables
+
 ## Prerequisites
 - VCN and subnet from where database can be accessed.
 - The subnet should have access to OCI Services (via a Service Gateway)
