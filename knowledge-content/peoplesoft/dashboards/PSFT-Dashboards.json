@@ -1,0 +1,3097 @@
+{
+	"dashboards": [
+		{
+			"dashboardId": "ocid1.managementdashboard.oc1..aaaaaaaaeftkzsk4xz4ooyogfzksm2zuw6sebpnaxxlbea4u5vq4d3rmwzla",
+			"providerId": "log-analytics",
+			"providerName": "Logging Analytics",
+			"providerVersion": "3.0.0",
+			"tiles": [
+				{
+					"displayName": "PSFT Active Sensors",
+					"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaaozxa7dzkmcqbgsvhg7nlrfs3z6pfpmny5qjazpixo7amx32z6caa",
+					"row": 0,
+					"column": 0,
+					"height": 3,
+					"width": 4,
+					"nls": {},
+					"uiConfig": {},
+					"dataConfig": [],
+					"state": "DEFAULT",
+					"drilldownConfig": [],
+					"parametersMap": {
+						"time": "$(dashboard.params.time)",
+						"log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+						"log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)"
+					}
+				},
+				{
+					"displayName": "PSFT Business Issues by Severity",
+					"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaajuz235tfmppftojtsru5mdm4bn22kujfflnelvkmozb5xqvshmaa",
+					"row": 0,
+					"column": 4,
+					"height": 3,
+					"width": 4,
+					"nls": {},
+					"uiConfig": {},
+					"dataConfig": [],
+					"state": "DEFAULT",
+					"drilldownConfig": [],
+					"parametersMap": {
+						"time": "$(dashboard.params.time)",
+						"log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+						"log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)"
+					}
+				},
+				{
+					"displayName": "PSFT Issue Frequency, Severity, Area",
+					"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaaee52vdc7rl5fq6r7ytgi6hk2cmoylu2avyxlnymqmwqsf5znbrga",
+					"row": 0,
+					"column": 8,
+					"height": 3,
+					"width": 4,
+					"nls": {},
+					"uiConfig": {},
+					"dataConfig": [],
+					"state": "DEFAULT",
+					"drilldownConfig": [],
+					"parametersMap": {
+						"time": "$(dashboard.params.time)",
+						"log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+						"log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)"
+					}
+				},
+				{
+					"displayName": "PSFT Issue Trend",
+					"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaax42b3lnzpzj7mubkw2arlhng6kcjwiqzwlglcbfnwjr2dkxkkg6q",
+					"row": 3,
+					"column": 0,
+					"height": 3,
+					"width": 4,
+					"nls": {},
+					"uiConfig": {},
+					"dataConfig": [],
+					"state": "DEFAULT",
+					"drilldownConfig": [],
+					"parametersMap": {
+						"time": "$(dashboard.params.time)",
+						"log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+						"log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)"
+					}
+				},
+				{
+					"displayName": "PSFT Issues Trend last 24h",
+					"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaaztdwvfhx4waobkh4u37mth2m5mswzmu2ooenxu6emjbqbh6y3bkq",
+					"row": 3,
+					"column": 4,
+					"height": 3,
+					"width": 4,
+					"nls": {},
+					"uiConfig": {},
+					"dataConfig": [],
+					"state": "DEFAULT",
+					"drilldownConfig": [],
+					"parametersMap": {
+						"time": "$(dashboard.params.time)",
+						"log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+						"log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)"
+					}
+				},
+				{
+					"displayName": "PSFT Issues and Product Areas",
+					"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaatzcko3htinzjxnsbr6miqgchximoctncmma2jpwdjxszu5o6fmqa",
+					"row": 3,
+					"column": 8,
+					"height": 3,
+					"width": 4,
+					"nls": {},
+					"uiConfig": {},
+					"dataConfig": [],
+					"state": "DEFAULT",
+					"drilldownConfig": [],
+					"parametersMap": {
+						"time": "$(dashboard.params.time)",
+						"log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+						"log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)"
+					}
+				},
+				{
+					"displayName": "PSFT Issues by Product Areas ",
+					"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaap7hkkyaa2cx4axudpi5lto5w2u3opz6nxv5ym2mlmhrimahdf2aq",
+					"row": 6,
+					"column": 0,
+					"height": 3,
+					"width": 4,
+					"nls": {},
+					"uiConfig": {},
+					"dataConfig": [],
+					"state": "DEFAULT",
+					"drilldownConfig": [],
+					"parametersMap": {
+						"time": "$(dashboard.params.time)",
+						"log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+						"log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)"
+					}
+				},
+				{
+					"displayName": "PSFT Problem Labels",
+					"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaaejmr24gjkwai5mojmcjjqmt2gxvbbekw45vbidvrtl7oefxx4o3a",
+					"row": 6,
+					"column": 4,
+					"height": 3,
+					"width": 4,
+					"nls": {},
+					"uiConfig": {},
+					"dataConfig": [],
+					"state": "DEFAULT",
+					"drilldownConfig": [],
+					"parametersMap": {
+						"time": "$(dashboard.params.time)",
+						"log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+						"log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)"
+					}
+				},
+				{
+					"displayName": "PSFT Triggered Sensors",
+					"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaazd4gbbsfjvexxcifngnxvgjt34fz4xlaux3mo6rwxzqur4dh47ka",
+					"row": 6,
+					"column": 8,
+					"height": 3,
+					"width": 4,
+					"nls": {},
+					"uiConfig": {},
+					"dataConfig": [],
+					"state": "DEFAULT",
+					"drilldownConfig": [],
+					"parametersMap": {
+						"time": "$(dashboard.params.time)",
+						"log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+						"log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)"
+					}
+				},
+				{
+					"displayName": "SD: PSFT Functional Issues",
+					"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaakxltx5xegsw7lv2adjczkapjdc3u6pklf7u7zjxtn3n2k3dtg56a",
+					"row": 9,
+					"column": 0,
+					"height": 3,
+					"width": 12,
+					"nls": {},
+					"uiConfig": {},
+					"dataConfig": [],
+					"state": "DEFAULT",
+					"drilldownConfig": [],
+					"parametersMap": {
+						"time": "$(dashboard.params.time)",
+						"log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+						"log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)"
+					}
+				}
+			],
+			"displayName": "PSFT Functional Issues",
+			"description": "",
+			"compartmentId": "${compartment_ocid}",
+			"isOobDashboard": false,
+			"isShowInHome": false,
+			"metadataVersion": "2.0",
+			"isShowDescription": true,
+			"screenImage": "todo: provide value[mandatory]",
+			"nls": {},
+			"uiConfig": {
+				"isFilteringEnabled": false,
+				"isTimeRangeEnabled": true,
+				"isRefreshEnabled": true
+			},
+			"dataConfig": [],
+			"type": "normal",
+			"isFavorite": false,
+			"savedSearches": [
+				{
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaaozxa7dzkmcqbgsvhg7nlrfs3z6pfpmny5qjazpixo7amx32z6caa",
+					"displayName": "PSFT Active Sensors",
+					"providerId": "log-analytics",
+					"providerVersion": "3.0.0",
+					"providerName": "Logging Analytics",
+					"compartmentId": "${compartment_ocid}",
+					"isOobSavedSearch": false,
+					"description": "PSFT Active Sensors",
+					"nls": {},
+					"type": "WIDGET_SHOW_IN_DASHBOARD",
+					"uiConfig": {
+						"timeSelection": {
+							"numUnits": 60,
+							"units": "DAYS",
+							"timePeriod": "relative"
+						},
+						"showTitle": true,
+						"visualizationType": "tile",
+						"visualizationOptions": {
+							"hideLabel": true,
+							"changeLabel": "",
+							"formatNumber": false,
+							"showTrend": true,
+							"customVizOpt": {
+								"GEOMAP_SETTINGS": {
+									"basemap": "bi_world_map_light",
+									"clusterColor": "rgb(192, 192, 192)",
+									"filterOnZoom": false,
+									"isShowLegend": true,
+									"lat": 2273030.9269876887,
+									"lon": 0,
+									"mapZoom": 1,
+									"pointColor": "rgb(0, 0, 255)",
+									"srid": 3857,
+									"toggleClusters": false
+								},
+								"LINK_SEARCH_SETTINGS": {
+									"chartHeightVal": 200,
+									"chartOptions": "bar",
+									"chartType": "bar",
+									"chartWidthVal": 60,
+									"columnAliases": {},
+									"dashboardOptions": {
+										"showAnalyzeTab": [],
+										"showChartsTab": [],
+										"showSummary": [
+											"on"
+										],
+										"showTSCharts": [],
+										"showTable": [
+											"on"
+										],
+										"showTabs": []
+									},
+									"groupAliasP": "Issues",
+									"groupAliasS": "Issue",
+									"hiddenCharts": {
+										"groupColumn": true
+									},
+									"hiddenClassifyCharts": {},
+									"hiddenColumns": {
+										"eventstats13_func1_sum_g_count": true,
+										"eventstats13_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"eventstats14_func1_sum_g_count": true,
+										"eventstats14_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"eventstats8_func1_sum_g_count": true,
+										"eventstats8_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"g_duration": true,
+										"g_endepoch": true,
+										"g_startepoch": true,
+										"query_end_time": true,
+										"query_start_time": true,
+										"trend_interval": true,
+										"trend_interval_unit": true
+									},
+									"highlightColumnStatus": {
+										"highlightedGroup1": {
+											"on": true,
+											"title": true
+										}
+									},
+									"linkSummaryInput": "card=<field:Total Issues>\ncard=<field:Product Areas>",
+									"logAliasP": "EBS Sensor Records",
+									"mergeHighlightColumns": [
+										"off"
+									],
+									"showAllRegions": [],
+									"showCombinedCharts": [
+										"off"
+									],
+									"showNonUnitRawData": [
+										"off"
+									],
+									"showStack": [
+										"off"
+									],
+									"showToolTips": [
+										"on"
+									],
+									"showUnitRawData": [],
+									"smartGroup": [
+										"off"
+									],
+									"styleDefaults": {},
+									"tableColumns": [
+										"High Priority",
+										"Issue",
+										"Description",
+										"Number of Issues",
+										"Business Flow",
+										"Business Impact",
+										"Product to raise SR if help needed",
+										"Prod Area",
+										"File SR",
+										"Total Issues",
+										"Product Areas",
+										"Name",
+										"Segment1",
+										"Segment2",
+										"Segment3",
+										"ST",
+										"ET",
+										"S1",
+										"More Info",
+										"ST1",
+										"ET1",
+										"S2",
+										"Log Source",
+										"Count"
+									],
+									"timeseries": {
+										"timestats1": {
+											"chartHeightVal": 200,
+											"chartOptions": "lineWithMarker",
+											"chartType": "line",
+											"chartWidthVal": 60,
+											"colorColumn": 0,
+											"hiddenTSCharts": {},
+											"showCombinedCharts": [
+												"on"
+											],
+											"showLegend": [
+												"off"
+											],
+											"showStack": [
+												"off"
+											],
+											"showToolTips": [
+												"off"
+											],
+											"smartGroup": [
+												"on"
+											],
+											"timeSeriesColorPalette": {
+												"0": "lookupField4xt_5540322972955376823xf17"
+											},
+											"timeSeriesColorPaletteCustom": {
+												"0": {}
+											},
+											"tsFilters": {
+												"selectAllFilters": [
+													"off"
+												],
+												"selectedTSFilters": [
+													"lookupField4xt_5540322972955376823xf17",
+													"timestats1_func1_sum_g_count"
+												],
+												"showTSFilters": [
+													"on"
+												]
+											}
+										}
+									}
+								},
+								"primaryFieldDname": "Original Log Content",
+								"primaryFieldIname": "mbody"
+							}
+						},
+						"queryString": "* | eval n = 335 | stats distinctcount('Log Source'), trend(distinctcount('Log Source'))",
+						"scopeFilters": {
+							"filters": [
+								{
+									"type": "LogGroup",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+											"label": "LogAnalytics"
+										}
+									]
+								},
+								{
+									"type": "Entity",
+									"flags": {
+										"IncludeDependents": true,
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+									},
+									"values": []
+								},
+								{
+									"type": "LogSet",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Region",
+									"flags": {},
+									"values": [
+										{
+											"value": "us-phoenix-1",
+											"label": "US West (Phoenix)"
+										}
+									]
+								}
+							],
+							"isGlobal": false,
+							"LogGroup": {
+								"type": "LogGroup",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+										"label": "LogAnalytics"
+									}
+								]
+							},
+							"Entity": {
+								"type": "Entity",
+								"flags": {
+									"IncludeDependents": true,
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+								},
+								"values": []
+							},
+							"LogSet": {
+								"type": "LogSet",
+								"flags": {},
+								"values": []
+							},
+							"Region": {
+								"type": "Region",
+								"flags": {},
+								"values": [
+									{
+										"value": "us-phoenix-1",
+										"label": "US West (Phoenix)"
+									}
+								]
+							}
+						},
+						"internalKey": "ocid1.managementsavedsearch.oc1..aaaaaaaaozxa7dzkmcqbgsvhg7nlrfs3z6pfpmny5qjazpixo7amx32z6caa",
+						"vizType": "lxSavedSearchWidgetType",
+						"enableWidgetInApp": true
+					},
+					"dataConfig": [],
+					"screenImage": " ",
+					"metadataVersion": "2.0",
+					"widgetTemplate": "visualizations/chartWidgetTemplate.html",
+					"widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+					"freeformTags": {},
+					"definedTags": {},
+					"parametersConfig": [
+						{
+							"name": "log-analytics-log-group-compartment",
+							"displayName": "Log Group Compartment",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-4a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-entity",
+							"displayName": "Entity",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-2a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-log-set",
+							"displayName": "Log Set",
+							"required": true,
+							"hidden": "$(window.logSetNotEnabled)",
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-3a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-region",
+							"displayName": "Region",
+							"required": false,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-region-filter"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-region-filter"
+								}
+							}
+						},
+						{
+							"name": "time",
+							"displayName": "$(bundle.globalSavedSearch.TIME)",
+							"required": true,
+							"hidden": true
+						},
+						{
+							"name": "flex"
+						}
+					],
+					"featuresConfig": {
+						"crossService": {
+							"shared": false
+						}
+					},
+					"drilldownConfig": []
+				},
+				{
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaaztdwvfhx4waobkh4u37mth2m5mswzmu2ooenxu6emjbqbh6y3bkq",
+					"displayName": "PSFT Issues Trend last 24h",
+					"providerId": "log-analytics",
+					"providerVersion": "3.0.0",
+					"providerName": "Logging Analytics",
+					"compartmentId": "${compartment_ocid}",
+					"isOobSavedSearch": false,
+					"description": "PSFT Issues Trend last 24h",
+					"nls": {},
+					"type": "WIDGET_SHOW_IN_DASHBOARD",
+					"uiConfig": {
+						"timeSelection": {
+							"timePeriod": "l14day"
+						},
+						"showTitle": true,
+						"visualizationType": "records_histogram",
+						"visualizationOptions": {
+							"customVizOpt": {
+								"GEOMAP_SETTINGS": {
+									"basemap": "bi_world_map_light",
+									"clusterColor": "rgb(192, 192, 192)",
+									"filterOnZoom": false,
+									"isShowLegend": true,
+									"lat": 2273030.9269876887,
+									"lon": 0,
+									"mapZoom": 1,
+									"pointColor": "rgb(0, 0, 255)",
+									"srid": 3857,
+									"toggleClusters": false
+								},
+								"LINK_SEARCH_SETTINGS": {
+									"chartHeightVal": 200,
+									"chartOptions": "bar",
+									"chartType": "bar",
+									"chartWidthVal": 60,
+									"columnAliases": {},
+									"dashboardOptions": {
+										"showAnalyzeTab": [],
+										"showChartsTab": [],
+										"showSummary": [
+											"on"
+										],
+										"showTSCharts": [],
+										"showTable": [
+											"on"
+										],
+										"showTabs": []
+									},
+									"groupAliasP": "Issues",
+									"groupAliasS": "Issue",
+									"hiddenCharts": {
+										"groupColumn": true
+									},
+									"hiddenClassifyCharts": {},
+									"hiddenColumns": {
+										"eventstats13_func1_sum_g_count": true,
+										"eventstats13_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"eventstats14_func1_sum_g_count": true,
+										"eventstats14_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"eventstats8_func1_sum_g_count": true,
+										"eventstats8_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"g_duration": true,
+										"g_endepoch": true,
+										"g_startepoch": true,
+										"query_end_time": true,
+										"query_start_time": true,
+										"trend_interval": true,
+										"trend_interval_unit": true
+									},
+									"highlightColumnStatus": {
+										"highlightedGroup1": {
+											"on": true,
+											"title": true
+										}
+									},
+									"linkSummaryInput": "card=<field:Total Issues>\ncard=<field:Product Areas>",
+									"logAliasP": "EBS Sensor Records",
+									"mergeHighlightColumns": [
+										"off"
+									],
+									"showAllRegions": [],
+									"showCombinedCharts": [
+										"off"
+									],
+									"showNonUnitRawData": [
+										"off"
+									],
+									"showStack": [
+										"off"
+									],
+									"showToolTips": [
+										"on"
+									],
+									"showUnitRawData": [],
+									"smartGroup": [
+										"off"
+									],
+									"styleDefaults": {},
+									"tableColumns": [
+										"High Priority",
+										"Issue",
+										"Description",
+										"Number of Issues",
+										"Business Flow",
+										"Business Impact",
+										"Product to raise SR if help needed",
+										"Prod Area",
+										"File SR",
+										"Total Issues",
+										"Product Areas",
+										"Name",
+										"Segment1",
+										"Segment2",
+										"Segment3",
+										"ST",
+										"ET",
+										"S1",
+										"More Info",
+										"ST1",
+										"ET1",
+										"S2",
+										"Log Source",
+										"Count"
+									],
+									"timeseries": {
+										"timestats1": {
+											"chartHeightVal": 200,
+											"chartOptions": "lineWithMarker",
+											"chartType": "line",
+											"chartWidthVal": 60,
+											"colorColumn": 0,
+											"hiddenTSCharts": {},
+											"showCombinedCharts": [
+												"on"
+											],
+											"showLegend": [
+												"off"
+											],
+											"showStack": [
+												"off"
+											],
+											"showToolTips": [
+												"off"
+											],
+											"smartGroup": [
+												"on"
+											],
+											"timeSeriesColorPalette": {
+												"0": "lookupField4xt_5540322972955376823xf17"
+											},
+											"timeSeriesColorPaletteCustom": {
+												"0": {}
+											},
+											"tsFilters": {
+												"selectAllFilters": [
+													"off"
+												],
+												"selectedTSFilters": [
+													"lookupField4xt_5540322972955376823xf17",
+													"timestats1_func1_sum_g_count"
+												],
+												"showTSFilters": [
+													"on"
+												]
+											}
+										}
+									}
+								},
+								"primaryFieldDname": "Original Log Content",
+								"primaryFieldIname": "mbody"
+							}
+						},
+						"queryString": "'Log Source' like 'PSFT Sensor*' | lookup table = 'PeopleSoft Functional Sensors' select 'Issue Summary', 'Issue Description' as Description, 'Solution KM Note' as N1, 'Business Flow', 'Business Impact', 'Product to raise SR if help needed', 'Prod Area', 'Issue Severity' using sensor = 'Metric Name' | eval x = ltrim('Prod Area', 'ebs -') | timestats count as 'Total Issues' by x",
+						"scopeFilters": {
+							"filters": [
+								{
+									"type": "LogGroup",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+											"label": "LogAnalytics"
+										}
+									]
+								},
+								{
+									"type": "Entity",
+									"flags": {
+										"IncludeDependents": true,
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+									},
+									"values": [
+										{
+											"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriag3uly3ejavikumhhwzmvmz44u5w3amzhfpsodtpgq4xa",
+											"label": "PSFT_HCM"
+										}
+									]
+								},
+								{
+									"type": "LogSet",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Region",
+									"flags": {},
+									"values": [
+										{
+											"value": "us-phoenix-1",
+											"label": "US West (Phoenix)"
+										}
+									]
+								}
+							],
+							"isGlobal": false,
+							"LogGroup": {
+								"type": "LogGroup",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+										"label": "LogAnalytics"
+									}
+								]
+							},
+							"Entity": {
+								"type": "Entity",
+								"flags": {
+									"IncludeDependents": true,
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+								},
+								"values": [
+									{
+										"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriag3uly3ejavikumhhwzmvmz44u5w3amzhfpsodtpgq4xa",
+										"label": "PSFT_HCM"
+									}
+								]
+							},
+							"LogSet": {
+								"type": "LogSet",
+								"flags": {},
+								"values": []
+							},
+							"Region": {
+								"type": "Region",
+								"flags": {},
+								"values": [
+									{
+										"value": "us-phoenix-1",
+										"label": "US West (Phoenix)"
+									}
+								]
+							}
+						},
+						"internalKey": "ocid1.managementsavedsearch.oc1..aaaaaaaaztdwvfhx4waobkh4u37mth2m5mswzmu2ooenxu6emjbqbh6y3bkq",
+						"vizType": "lxSavedSearchWidgetType",
+						"enableWidgetInApp": true
+					},
+					"dataConfig": [],
+					"screenImage": " ",
+					"metadataVersion": "2.0",
+					"widgetTemplate": "visualizations/chartWidgetTemplate.html",
+					"widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+					"freeformTags": {},
+					"definedTags": {},
+					"parametersConfig": [
+						{
+							"name": "log-analytics-log-group-compartment",
+							"displayName": "Log Group Compartment",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-4a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-entity",
+							"displayName": "Entity",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-2a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-log-set",
+							"displayName": "Log Set",
+							"required": true,
+							"hidden": "$(window.logSetNotEnabled)",
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-3a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-region",
+							"displayName": "Region",
+							"required": false,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-region-filter"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-region-filter"
+								}
+							}
+						},
+						{
+							"name": "time",
+							"displayName": "$(bundle.globalSavedSearch.TIME)",
+							"required": true,
+							"hidden": true
+						},
+						{
+							"name": "flex"
+						}
+					],
+					"featuresConfig": {
+						"crossService": {
+							"shared": false
+						}
+					},
+					"drilldownConfig": []
+				},
+				{
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaazd4gbbsfjvexxcifngnxvgjt34fz4xlaux3mo6rwxzqur4dh47ka",
+					"displayName": "PSFT Triggered Sensors",
+					"providerId": "log-analytics",
+					"providerVersion": "3.0.0",
+					"providerName": "Logging Analytics",
+					"compartmentId": "${compartment_ocid}",
+					"isOobSavedSearch": false,
+					"description": "PSFT Triggered Sensors",
+					"nls": {},
+					"type": "WIDGET_SHOW_IN_DASHBOARD",
+					"uiConfig": {
+						"timeSelection": {
+							"startTimeUtc": "2023-03-10T12:49:00.000Z",
+							"endTimeUtc": "2023-03-10T12:50:00.000Z",
+							"timePeriod": "cust"
+						},
+						"showTitle": true,
+						"visualizationType": "tile",
+						"visualizationOptions": {
+							"hideLabel": true,
+							"changeLabel": "",
+							"formatNumber": false,
+							"showTrend": true
+						},
+						"queryString": "'Log Source' like 'PSFT Sensor:%' | stats distinctcount('Log Source'), trend(count('Log Source'))",
+						"scopeFilters": {
+							"filters": [
+								{
+									"type": "LogGroup",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+											"label": "LogAnalytics"
+										}
+									]
+								},
+								{
+									"type": "Entity",
+									"flags": {
+										"IncludeDependents": true,
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+									},
+									"values": [
+										{
+											"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriag3uly3ejavikumhhwzmvmz44u5w3amzhfpsodtpgq4xa",
+											"label": "PSFT_HCM"
+										}
+									]
+								},
+								{
+									"type": "LogSet",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Region",
+									"flags": {},
+									"values": [
+										{
+											"value": "us-phoenix-1",
+											"label": "US West (Phoenix)"
+										}
+									]
+								}
+							],
+							"isGlobal": false,
+							"LogGroup": {
+								"type": "LogGroup",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+										"label": "LogAnalytics"
+									}
+								]
+							},
+							"Entity": {
+								"type": "Entity",
+								"flags": {
+									"IncludeDependents": true,
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+								},
+								"values": [
+									{
+										"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriag3uly3ejavikumhhwzmvmz44u5w3amzhfpsodtpgq4xa",
+										"label": "PSFT_HCM"
+									}
+								]
+							},
+							"LogSet": {
+								"type": "LogSet",
+								"flags": {},
+								"values": []
+							},
+							"Region": {
+								"type": "Region",
+								"flags": {},
+								"values": [
+									{
+										"value": "us-phoenix-1",
+										"label": "US West (Phoenix)"
+									}
+								]
+							}
+						},
+						"internalKey": "ocid1.managementsavedsearch.oc1..aaaaaaaazd4gbbsfjvexxcifngnxvgjt34fz4xlaux3mo6rwxzqur4dh47ka",
+						"vizType": "lxSavedSearchWidgetType",
+						"enableWidgetInApp": true
+					},
+					"dataConfig": [],
+					"screenImage": " ",
+					"metadataVersion": "2.0",
+					"widgetTemplate": "visualizations/chartWidgetTemplate.html",
+					"widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+					"freeformTags": {},
+					"definedTags": {},
+					"parametersConfig": [
+						{
+							"name": "log-analytics-log-group-compartment",
+							"displayName": "Log Group Compartment",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-4a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-entity",
+							"displayName": "Entity",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-2a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-log-set",
+							"displayName": "Log Set",
+							"required": true,
+							"hidden": "$(window.logSetNotEnabled)",
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-3a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-region",
+							"displayName": "Region",
+							"required": false,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-region-filter"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-region-filter"
+								}
+							}
+						},
+						{
+							"name": "time",
+							"displayName": "$(bundle.globalSavedSearch.TIME)",
+							"required": true,
+							"hidden": true
+						},
+						{
+							"name": "flex"
+						}
+					],
+					"featuresConfig": {
+						"crossService": {
+							"shared": false
+						}
+					},
+					"drilldownConfig": []
+				},
+				{
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaatzcko3htinzjxnsbr6miqgchximoctncmma2jpwdjxszu5o6fmqa",
+					"displayName": "PSFT Issues and Product Areas",
+					"providerId": "log-analytics",
+					"providerVersion": "3.0.0",
+					"providerName": "Logging Analytics",
+					"compartmentId": "${compartment_ocid}",
+					"isOobSavedSearch": false,
+					"description": "PSFT Ebusiness Suite Functional Issues across areas",
+					"nls": {},
+					"type": "WIDGET_SHOW_IN_DASHBOARD",
+					"uiConfig": {
+						"timeSelection": {
+							"timePeriod": "l14day"
+						},
+						"showTitle": true,
+						"visualizationType": "treemap",
+						"visualizationOptions": {
+							"customVizOpt": {
+								"GEOMAP_SETTINGS": {
+									"basemap": "bi_world_map_light",
+									"clusterColor": "rgb(192, 192, 192)",
+									"filterOnZoom": false,
+									"isShowLegend": true,
+									"lat": 2273030.9269876887,
+									"lon": 0,
+									"mapZoom": 1,
+									"pointColor": "rgb(0, 0, 255)",
+									"srid": 3857,
+									"toggleClusters": false
+								},
+								"LINK_SEARCH_SETTINGS": {
+									"chartHeightVal": 200,
+									"chartOptions": "bar",
+									"chartType": "bar",
+									"chartWidthVal": 60,
+									"columnAliases": {},
+									"dashboardOptions": {
+										"showAnalyzeTab": [],
+										"showChartsTab": [],
+										"showSummary": [
+											"on"
+										],
+										"showTSCharts": [],
+										"showTable": [
+											"on"
+										],
+										"showTabs": []
+									},
+									"groupAliasP": "Issues",
+									"groupAliasS": "Issue",
+									"hiddenCharts": {
+										"groupColumn": true
+									},
+									"hiddenClassifyCharts": {},
+									"hiddenColumns": {
+										"eventstats13_func1_sum_g_count": true,
+										"eventstats13_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"eventstats14_func1_sum_g_count": true,
+										"eventstats14_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"eventstats8_func1_sum_g_count": true,
+										"eventstats8_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"g_duration": true,
+										"g_endepoch": true,
+										"g_startepoch": true,
+										"query_end_time": true,
+										"query_start_time": true,
+										"trend_interval": true,
+										"trend_interval_unit": true
+									},
+									"highlightColumnStatus": {
+										"highlightedGroup1": {
+											"on": true,
+											"title": true
+										}
+									},
+									"linkSummaryInput": "card=<field:Total Issues>\ncard=<field:Product Areas>",
+									"logAliasP": "EBS Sensor Records",
+									"mergeHighlightColumns": [
+										"off"
+									],
+									"showAllRegions": [],
+									"showCombinedCharts": [
+										"off"
+									],
+									"showNonUnitRawData": [
+										"off"
+									],
+									"showStack": [
+										"off"
+									],
+									"showToolTips": [
+										"on"
+									],
+									"showUnitRawData": [],
+									"smartGroup": [
+										"off"
+									],
+									"styleDefaults": {},
+									"tableColumns": [
+										"High Priority",
+										"Issue",
+										"Description",
+										"Number of Issues",
+										"Business Flow",
+										"Business Impact",
+										"Product to raise SR if help needed",
+										"Prod Area",
+										"File SR",
+										"Total Issues",
+										"Product Areas",
+										"Name",
+										"Segment1",
+										"Segment2",
+										"Segment3",
+										"ST",
+										"ET",
+										"S1",
+										"More Info",
+										"ST1",
+										"ET1",
+										"S2",
+										"Log Source",
+										"Count"
+									],
+									"timeseries": {
+										"timestats1": {
+											"chartHeightVal": 200,
+											"chartOptions": "lineWithMarker",
+											"chartType": "line",
+											"chartWidthVal": 60,
+											"colorColumn": 0,
+											"hiddenTSCharts": {},
+											"showCombinedCharts": [
+												"on"
+											],
+											"showLegend": [
+												"off"
+											],
+											"showStack": [
+												"off"
+											],
+											"showToolTips": [
+												"off"
+											],
+											"smartGroup": [
+												"on"
+											],
+											"timeSeriesColorPalette": {
+												"0": "lookupField4xt_5540322972955376823xf17"
+											},
+											"timeSeriesColorPaletteCustom": {
+												"0": {}
+											},
+											"tsFilters": {
+												"selectAllFilters": [
+													"off"
+												],
+												"selectedTSFilters": [
+													"lookupField4xt_5540322972955376823xf17",
+													"timestats1_func1_sum_g_count"
+												],
+												"showTSFilters": [
+													"on"
+												]
+											}
+										}
+									}
+								},
+								"primaryFieldDname": "Original Log Content",
+								"primaryFieldIname": "mbody"
+							}
+						},
+						"queryString": "'Log Source' like 'PSFT Sensor*' | lookup table = 'PeopleSoft Functional Sensors' select 'Issue Summary', 'Issue Description' as Description, 'Solution KM Note' as N1, 'Business Flow', 'Business Impact', 'Product to raise SR if help needed', 'Prod Area', 'Issue Severity' using sensor = 'Metric Name' | stats count as 'Total Issues' by Description, 'Prod Area'",
+						"scopeFilters": {
+							"filters": [
+								{
+									"type": "LogGroup",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+											"label": "LogAnalytics"
+										}
+									]
+								},
+								{
+									"type": "Entity",
+									"flags": {
+										"IncludeDependents": true,
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+									},
+									"values": [
+										{
+											"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriag3uly3ejavikumhhwzmvmz44u5w3amzhfpsodtpgq4xa",
+											"label": "PSFT_HCM"
+										}
+									]
+								},
+								{
+									"type": "LogSet",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Region",
+									"flags": {},
+									"values": [
+										{
+											"value": "us-phoenix-1",
+											"label": "US West (Phoenix)"
+										}
+									]
+								}
+							],
+							"isGlobal": false,
+							"LogGroup": {
+								"type": "LogGroup",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+										"label": "LogAnalytics"
+									}
+								]
+							},
+							"Entity": {
+								"type": "Entity",
+								"flags": {
+									"IncludeDependents": true,
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+								},
+								"values": [
+									{
+										"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriag3uly3ejavikumhhwzmvmz44u5w3amzhfpsodtpgq4xa",
+										"label": "PSFT_HCM"
+									}
+								]
+							},
+							"LogSet": {
+								"type": "LogSet",
+								"flags": {},
+								"values": []
+							},
+							"Region": {
+								"type": "Region",
+								"flags": {},
+								"values": [
+									{
+										"value": "us-phoenix-1",
+										"label": "US West (Phoenix)"
+									}
+								]
+							}
+						},
+						"internalKey": "ocid1.managementsavedsearch.oc1..aaaaaaaatzcko3htinzjxnsbr6miqgchximoctncmma2jpwdjxszu5o6fmqa",
+						"vizType": "lxSavedSearchWidgetType",
+						"enableWidgetInApp": true
+					},
+					"dataConfig": [],
+					"screenImage": " ",
+					"metadataVersion": "2.0",
+					"widgetTemplate": "visualizations/chartWidgetTemplate.html",
+					"widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+					"freeformTags": {},
+					"definedTags": {},
+					"parametersConfig": [
+						{
+							"name": "log-analytics-log-group-compartment",
+							"displayName": "Log Group Compartment",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-4a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-entity",
+							"displayName": "Entity",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-2a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-log-set",
+							"displayName": "Log Set",
+							"required": true,
+							"hidden": "$(window.logSetNotEnabled)",
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-3a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-region",
+							"displayName": "Region",
+							"required": false,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-region-filter"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-region-filter"
+								}
+							}
+						},
+						{
+							"name": "time",
+							"displayName": "$(bundle.globalSavedSearch.TIME)",
+							"required": true,
+							"hidden": true
+						},
+						{
+							"name": "flex"
+						}
+					],
+					"featuresConfig": {
+						"crossService": {
+							"shared": false
+						}
+					},
+					"drilldownConfig": []
+				},
+				{
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaap7hkkyaa2cx4axudpi5lto5w2u3opz6nxv5ym2mlmhrimahdf2aq",
+					"displayName": "PSFT Issues by Product Areas ",
+					"providerId": "log-analytics",
+					"providerVersion": "3.0.0",
+					"providerName": "Logging Analytics",
+					"compartmentId": "${compartment_ocid}",
+					"isOobSavedSearch": false,
+					"description": "PSFT Issues by Product Areas ",
+					"nls": {},
+					"type": "WIDGET_SHOW_IN_DASHBOARD",
+					"uiConfig": {
+						"timeSelection": {
+							"timePeriod": "l14day"
+						},
+						"showTitle": true,
+						"visualizationType": "hbar",
+						"visualizationOptions": {
+							"customVizOpt": {
+								"GEOMAP_SETTINGS": {
+									"basemap": "bi_world_map_light",
+									"clusterColor": "rgb(192, 192, 192)",
+									"filterOnZoom": false,
+									"isShowLegend": true,
+									"lat": 2273030.9269876887,
+									"lon": 0,
+									"mapZoom": 1,
+									"pointColor": "rgb(0, 0, 255)",
+									"srid": 3857,
+									"toggleClusters": false
+								},
+								"LINK_SEARCH_SETTINGS": {
+									"chartHeightVal": 200,
+									"chartOptions": "bar",
+									"chartType": "bar",
+									"chartWidthVal": 60,
+									"columnAliases": {},
+									"dashboardOptions": {
+										"showAnalyzeTab": [],
+										"showChartsTab": [],
+										"showSummary": [
+											"on"
+										],
+										"showTSCharts": [],
+										"showTable": [
+											"on"
+										],
+										"showTabs": []
+									},
+									"groupAliasP": "Issues",
+									"groupAliasS": "Issue",
+									"hiddenCharts": {
+										"groupColumn": true
+									},
+									"hiddenClassifyCharts": {},
+									"hiddenColumns": {
+										"eventstats13_func1_sum_g_count": true,
+										"eventstats13_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"eventstats14_func1_sum_g_count": true,
+										"eventstats14_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"eventstats8_func1_sum_g_count": true,
+										"eventstats8_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"g_duration": true,
+										"g_endepoch": true,
+										"g_startepoch": true,
+										"query_end_time": true,
+										"query_start_time": true,
+										"trend_interval": true,
+										"trend_interval_unit": true
+									},
+									"highlightColumnStatus": {
+										"highlightedGroup1": {
+											"on": true,
+											"title": true
+										}
+									},
+									"linkSummaryInput": "card=<field:Total Issues>\ncard=<field:Product Areas>",
+									"logAliasP": "EBS Sensor Records",
+									"mergeHighlightColumns": [
+										"off"
+									],
+									"showAllRegions": [],
+									"showCombinedCharts": [
+										"off"
+									],
+									"showNonUnitRawData": [
+										"off"
+									],
+									"showStack": [
+										"off"
+									],
+									"showToolTips": [
+										"on"
+									],
+									"showUnitRawData": [],
+									"smartGroup": [
+										"off"
+									],
+									"styleDefaults": {},
+									"tableColumns": [
+										"High Priority",
+										"Issue",
+										"Description",
+										"Number of Issues",
+										"Business Flow",
+										"Business Impact",
+										"Product to raise SR if help needed",
+										"Prod Area",
+										"File SR",
+										"Total Issues",
+										"Product Areas",
+										"Name",
+										"Segment1",
+										"Segment2",
+										"Segment3",
+										"ST",
+										"ET",
+										"S1",
+										"More Info",
+										"ST1",
+										"ET1",
+										"S2",
+										"Log Source",
+										"Count"
+									],
+									"timeseries": {
+										"timestats1": {
+											"chartHeightVal": 200,
+											"chartOptions": "lineWithMarker",
+											"chartType": "line",
+											"chartWidthVal": 60,
+											"colorColumn": 0,
+											"hiddenTSCharts": {},
+											"showCombinedCharts": [
+												"on"
+											],
+											"showLegend": [
+												"off"
+											],
+											"showStack": [
+												"off"
+											],
+											"showToolTips": [
+												"off"
+											],
+											"smartGroup": [
+												"on"
+											],
+											"timeSeriesColorPalette": {
+												"0": "lookupField4xt_5540322972955376823xf17"
+											},
+											"timeSeriesColorPaletteCustom": {
+												"0": {}
+											},
+											"tsFilters": {
+												"selectAllFilters": [
+													"off"
+												],
+												"selectedTSFilters": [
+													"lookupField4xt_5540322972955376823xf17",
+													"timestats1_func1_sum_g_count"
+												],
+												"showTSFilters": [
+													"on"
+												]
+											}
+										}
+									}
+								},
+								"primaryFieldDname": "Original Log Content",
+								"primaryFieldIname": "mbody"
+							}
+						},
+						"queryString": "'Log Source' like 'PSFT Sensor*' | lookup table = 'PeopleSoft Functional Sensors' select 'Issue Summary', 'Issue Description' as Description, 'Solution KM Note' as N1, 'Business Flow', 'Business Impact', 'Product to raise SR if help needed', 'Prod Area', 'Issue Severity' using sensor = 'Metric Name' | eval x = ltrim('Prod Area', 'ebs -') | stats count as 'Total Issues' by x | sort -'Total Issues'",
+						"scopeFilters": {
+							"filters": [
+								{
+									"type": "LogGroup",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+											"label": "LogAnalytics"
+										}
+									]
+								},
+								{
+									"type": "Entity",
+									"flags": {
+										"IncludeDependents": true,
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+									},
+									"values": [
+										{
+											"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriag3uly3ejavikumhhwzmvmz44u5w3amzhfpsodtpgq4xa",
+											"label": "PSFT_HCM"
+										}
+									]
+								},
+								{
+									"type": "LogSet",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Region",
+									"flags": {},
+									"values": [
+										{
+											"value": "us-phoenix-1",
+											"label": "US West (Phoenix)"
+										}
+									]
+								}
+							],
+							"isGlobal": false,
+							"LogGroup": {
+								"type": "LogGroup",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+										"label": "LogAnalytics"
+									}
+								]
+							},
+							"Entity": {
+								"type": "Entity",
+								"flags": {
+									"IncludeDependents": true,
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+								},
+								"values": [
+									{
+										"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriag3uly3ejavikumhhwzmvmz44u5w3amzhfpsodtpgq4xa",
+										"label": "PSFT_HCM"
+									}
+								]
+							},
+							"LogSet": {
+								"type": "LogSet",
+								"flags": {},
+								"values": []
+							},
+							"Region": {
+								"type": "Region",
+								"flags": {},
+								"values": [
+									{
+										"value": "us-phoenix-1",
+										"label": "US West (Phoenix)"
+									}
+								]
+							}
+						},
+						"internalKey": "ocid1.managementsavedsearch.oc1..aaaaaaaap7hkkyaa2cx4axudpi5lto5w2u3opz6nxv5ym2mlmhrimahdf2aq",
+						"vizType": "lxSavedSearchWidgetType",
+						"enableWidgetInApp": true
+					},
+					"dataConfig": [],
+					"screenImage": " ",
+					"metadataVersion": "2.0",
+					"widgetTemplate": "visualizations/chartWidgetTemplate.html",
+					"widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+					"freeformTags": {},
+					"definedTags": {},
+					"parametersConfig": [
+						{
+							"name": "log-analytics-log-group-compartment",
+							"displayName": "Log Group Compartment",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-4a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-entity",
+							"displayName": "Entity",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-2a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-log-set",
+							"displayName": "Log Set",
+							"required": true,
+							"hidden": "$(window.logSetNotEnabled)",
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-3a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-region",
+							"displayName": "Region",
+							"required": false,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-region-filter"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-region-filter"
+								}
+							}
+						},
+						{
+							"name": "time",
+							"displayName": "$(bundle.globalSavedSearch.TIME)",
+							"required": true,
+							"hidden": true
+						},
+						{
+							"name": "flex"
+						}
+					],
+					"featuresConfig": {
+						"crossService": {
+							"shared": false
+						}
+					},
+					"drilldownConfig": []
+				},
+				{
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaaee52vdc7rl5fq6r7ytgi6hk2cmoylu2avyxlnymqmwqsf5znbrga",
+					"displayName": "PSFT Issue Frequency, Severity, Area",
+					"providerId": "log-analytics",
+					"providerVersion": "3.0.0",
+					"providerName": "Logging Analytics",
+					"compartmentId": "${compartment_ocid}",
+					"isOobSavedSearch": false,
+					"description": "PSFT Issue Frequency, Severity, Area",
+					"nls": {},
+					"type": "WIDGET_SHOW_IN_DASHBOARD",
+					"uiConfig": {
+						"timeSelection": {
+							"timePeriod": "l14day"
+						},
+						"showTitle": true,
+						"visualizationType": "treemap",
+						"visualizationOptions": {},
+						"queryString": "'Log Source' like 'PSFT Sensor*' | lookup table = 'PeopleSoft Functional Sensors' select 'Issue Summary', 'Issue Description' as Description, 'Solution KM Note' as N1, 'Business Flow', 'Business Impact', 'Product to raise SR if help needed', 'Prod Area' as Product, 'Issue Severity' as Severity, Scheduling as 'Check Schedule' using sensor = 'Metric Name' | where 'Check Schedule' != null | stats distinctcount(sensor) as 'Total Issues' by 'Check Schedule', Severity, Product",
+						"scopeFilters": {
+							"filters": [
+								{
+									"type": "LogGroup",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+											"label": "LogAnalytics"
+										}
+									]
+								},
+								{
+									"type": "Entity",
+									"flags": {
+										"IncludeDependents": true,
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+									},
+									"values": [
+										{
+											"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriag3uly3ejavikumhhwzmvmz44u5w3amzhfpsodtpgq4xa",
+											"label": "PSFT_HCM"
+										}
+									]
+								},
+								{
+									"type": "LogSet",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Region",
+									"flags": {},
+									"values": [
+										{
+											"value": "us-phoenix-1",
+											"label": "US West (Phoenix)"
+										}
+									]
+								}
+							],
+							"isGlobal": false,
+							"LogGroup": {
+								"type": "LogGroup",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+										"label": "LogAnalytics"
+									}
+								]
+							},
+							"Entity": {
+								"type": "Entity",
+								"flags": {
+									"IncludeDependents": true,
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+								},
+								"values": [
+									{
+										"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriag3uly3ejavikumhhwzmvmz44u5w3amzhfpsodtpgq4xa",
+										"label": "PSFT_HCM"
+									}
+								]
+							},
+							"LogSet": {
+								"type": "LogSet",
+								"flags": {},
+								"values": []
+							},
+							"Region": {
+								"type": "Region",
+								"flags": {},
+								"values": [
+									{
+										"value": "us-phoenix-1",
+										"label": "US West (Phoenix)"
+									}
+								]
+							}
+						},
+						"internalKey": "ocid1.managementsavedsearch.oc1..aaaaaaaaee52vdc7rl5fq6r7ytgi6hk2cmoylu2avyxlnymqmwqsf5znbrga",
+						"vizType": "lxSavedSearchWidgetType",
+						"enableWidgetInApp": true
+					},
+					"dataConfig": [],
+					"screenImage": " ",
+					"metadataVersion": "2.0",
+					"widgetTemplate": "visualizations/chartWidgetTemplate.html",
+					"widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+					"freeformTags": {},
+					"definedTags": {},
+					"parametersConfig": [
+						{
+							"name": "log-analytics-log-group-compartment",
+							"displayName": "Log Group Compartment",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-4a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-entity",
+							"displayName": "Entity",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-2a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-log-set",
+							"displayName": "Log Set",
+							"required": true,
+							"hidden": "$(window.logSetNotEnabled)",
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-3a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-region",
+							"displayName": "Region",
+							"required": false,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-region-filter"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-region-filter"
+								}
+							}
+						},
+						{
+							"name": "time",
+							"displayName": "$(bundle.globalSavedSearch.TIME)",
+							"required": true,
+							"hidden": true
+						},
+						{
+							"name": "flex"
+						}
+					],
+					"featuresConfig": {
+						"crossService": {
+							"shared": false
+						}
+					},
+					"drilldownConfig": []
+				},
+				{
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaajuz235tfmppftojtsru5mdm4bn22kujfflnelvkmozb5xqvshmaa",
+					"displayName": "PSFT Business Issues by Severity",
+					"providerId": "log-analytics",
+					"providerVersion": "3.0.0",
+					"providerName": "Logging Analytics",
+					"compartmentId": "${compartment_ocid}",
+					"isOobSavedSearch": false,
+					"description": "PSFT Business Issues by Severity",
+					"nls": {},
+					"type": "WIDGET_SHOW_IN_DASHBOARD",
+					"uiConfig": {
+						"timeSelection": {
+							"timePeriod": "l14day"
+						},
+						"showTitle": true,
+						"visualizationType": "pie",
+						"visualizationOptions": {
+							"customVizOpt": {
+								"primaryFieldIname": "mbody",
+								"primaryFieldDname": "Original Log Content"
+							}
+						},
+						"queryString": "'Log Source' like 'PSFT Sensor*' | lookup table = 'PeopleSoft Functional Sensors' select 'Issue Summary', 'Issue Description' as Description, 'Solution KM Note' as N1, 'Business Flow', 'Business Impact', 'Product to raise SR if help needed', 'Prod Area' as Product, 'Issue Severity' as Severity using sensor = 'Metric Name' | eval sev = concat('Severity: ', Severity) | stats distinctcount(sensor) as 'Total Issues' by sev",
+						"scopeFilters": {
+							"filters": [
+								{
+									"type": "LogGroup",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+											"label": "LogAnalytics"
+										}
+									]
+								},
+								{
+									"type": "Entity",
+									"flags": {
+										"IncludeDependents": true,
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+									},
+									"values": [
+										{
+											"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriag3uly3ejavikumhhwzmvmz44u5w3amzhfpsodtpgq4xa",
+											"label": "PSFT_HCM"
+										}
+									]
+								},
+								{
+									"type": "LogSet",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Region",
+									"flags": {},
+									"values": [
+										{
+											"value": "us-phoenix-1",
+											"label": "US West (Phoenix)"
+										}
+									]
+								}
+							],
+							"isGlobal": false,
+							"LogGroup": {
+								"type": "LogGroup",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+										"label": "LogAnalytics"
+									}
+								]
+							},
+							"Entity": {
+								"type": "Entity",
+								"flags": {
+									"IncludeDependents": true,
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+								},
+								"values": [
+									{
+										"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriag3uly3ejavikumhhwzmvmz44u5w3amzhfpsodtpgq4xa",
+										"label": "PSFT_HCM"
+									}
+								]
+							},
+							"LogSet": {
+								"type": "LogSet",
+								"flags": {},
+								"values": []
+							},
+							"Region": {
+								"type": "Region",
+								"flags": {},
+								"values": [
+									{
+										"value": "us-phoenix-1",
+										"label": "US West (Phoenix)"
+									}
+								]
+							}
+						},
+						"internalKey": "ocid1.managementsavedsearch.oc1..aaaaaaaajuz235tfmppftojtsru5mdm4bn22kujfflnelvkmozb5xqvshmaa",
+						"vizType": "lxSavedSearchWidgetType",
+						"enableWidgetInApp": true
+					},
+					"dataConfig": [],
+					"screenImage": " ",
+					"metadataVersion": "2.0",
+					"widgetTemplate": "visualizations/chartWidgetTemplate.html",
+					"widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+					"freeformTags": {},
+					"definedTags": {},
+					"parametersConfig": [
+						{
+							"name": "log-analytics-log-group-compartment",
+							"displayName": "Log Group Compartment",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-4a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-entity",
+							"displayName": "Entity",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-2a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-log-set",
+							"displayName": "Log Set",
+							"required": true,
+							"hidden": "$(window.logSetNotEnabled)",
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-3a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-region",
+							"displayName": "Region",
+							"required": false,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-region-filter"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-region-filter"
+								}
+							}
+						},
+						{
+							"name": "time",
+							"displayName": "$(bundle.globalSavedSearch.TIME)",
+							"required": true,
+							"hidden": true
+						},
+						{
+							"name": "flex"
+						}
+					],
+					"featuresConfig": {
+						"crossService": {
+							"shared": false
+						}
+					},
+					"drilldownConfig": []
+				},
+				{
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaax42b3lnzpzj7mubkw2arlhng6kcjwiqzwlglcbfnwjr2dkxkkg6q",
+					"displayName": "PSFT Issue Trend",
+					"providerId": "log-analytics",
+					"providerVersion": "3.0.0",
+					"providerName": "Logging Analytics",
+					"compartmentId": "${compartment_ocid}",
+					"isOobSavedSearch": false,
+					"description": "PSFT Functional Issues Trend",
+					"nls": {},
+					"type": "WIDGET_SHOW_IN_DASHBOARD",
+					"uiConfig": {
+						"timeSelection": {
+							"timePeriod": "l14day"
+						},
+						"showTitle": true,
+						"visualizationType": "pie",
+						"visualizationOptions": {
+							"customVizOpt": {
+								"GEOMAP_SETTINGS": {
+									"basemap": "bi_world_map_light",
+									"clusterColor": "rgb(192, 192, 192)",
+									"filterOnZoom": false,
+									"isShowLegend": true,
+									"lat": 2273030.9269876887,
+									"lon": 0,
+									"mapZoom": 1,
+									"pointColor": "rgb(0, 0, 255)",
+									"srid": 3857,
+									"toggleClusters": false
+								},
+								"LINK_SEARCH_SETTINGS": {
+									"chartHeightVal": 200,
+									"chartOptions": "bar",
+									"chartType": "bar",
+									"chartWidthVal": 60,
+									"columnAliases": {},
+									"dashboardOptions": {
+										"showAnalyzeTab": [],
+										"showChartsTab": [],
+										"showSummary": [
+											"on"
+										],
+										"showTSCharts": [],
+										"showTable": [
+											"on"
+										],
+										"showTabs": []
+									},
+									"groupAliasP": "Issues",
+									"groupAliasS": "Issue",
+									"hiddenCharts": {
+										"groupColumn": true
+									},
+									"hiddenClassifyCharts": {},
+									"hiddenColumns": {
+										"eventstats13_func1_sum_g_count": true,
+										"eventstats13_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"eventstats14_func1_sum_g_count": true,
+										"eventstats14_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"eventstats8_func1_sum_g_count": true,
+										"eventstats8_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"g_duration": true,
+										"g_endepoch": true,
+										"g_startepoch": true,
+										"query_end_time": true,
+										"query_start_time": true,
+										"trend_interval": true,
+										"trend_interval_unit": true
+									},
+									"highlightColumnStatus": {
+										"highlightedGroup1": {
+											"on": true,
+											"title": true
+										}
+									},
+									"linkSummaryInput": "card=<field:Total Issues>\ncard=<field:Product Areas>",
+									"logAliasP": "EBS Sensor Records",
+									"mergeHighlightColumns": [
+										"off"
+									],
+									"showAllRegions": [],
+									"showCombinedCharts": [
+										"off"
+									],
+									"showNonUnitRawData": [
+										"off"
+									],
+									"showStack": [
+										"off"
+									],
+									"showToolTips": [
+										"on"
+									],
+									"showUnitRawData": [],
+									"smartGroup": [
+										"off"
+									],
+									"styleDefaults": {},
+									"tableColumns": [
+										"High Priority",
+										"Issue",
+										"Description",
+										"Number of Issues",
+										"Business Flow",
+										"Business Impact",
+										"Product to raise SR if help needed",
+										"Prod Area",
+										"File SR",
+										"Total Issues",
+										"Product Areas",
+										"Name",
+										"Segment1",
+										"Segment2",
+										"Segment3",
+										"ST",
+										"ET",
+										"S1",
+										"More Info",
+										"ST1",
+										"ET1",
+										"S2",
+										"Log Source",
+										"Count"
+									],
+									"timeseries": {
+										"timestats1": {
+											"chartHeightVal": 200,
+											"chartOptions": "lineWithMarker",
+											"chartType": "line",
+											"chartWidthVal": 60,
+											"colorColumn": 0,
+											"hiddenTSCharts": {},
+											"showCombinedCharts": [
+												"on"
+											],
+											"showLegend": [
+												"off"
+											],
+											"showStack": [
+												"off"
+											],
+											"showToolTips": [
+												"off"
+											],
+											"smartGroup": [
+												"on"
+											],
+											"timeSeriesColorPalette": {
+												"0": "lookupField4xt_5540322972955376823xf17"
+											},
+											"timeSeriesColorPaletteCustom": {
+												"0": {}
+											},
+											"tsFilters": {
+												"selectAllFilters": [
+													"off"
+												],
+												"selectedTSFilters": [
+													"lookupField4xt_5540322972955376823xf17",
+													"timestats1_func1_sum_g_count"
+												],
+												"showTSFilters": [
+													"on"
+												]
+											}
+										}
+									}
+								},
+								"primaryFieldDname": "Original Log Content",
+								"primaryFieldIname": "mbody"
+							}
+						},
+						"queryString": "'Log Source' like 'PSFT Sensor*' | lookup table = 'PeopleSoft Functional Sensors' select 'Issue Summary', 'Issue Description' as Description, 'Solution KM Note' as N1, 'Business Flow', 'Business Impact', 'Product to raise SR if help needed', 'Prod Area', 'Issue Severity' using sensor = 'Metric Name' | eval x = ltrim('Prod Area', 'ebs -') | stats count as 'Total Issues' by x",
+						"scopeFilters": {
+							"filters": [
+								{
+									"type": "LogGroup",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+											"label": "LogAnalytics"
+										}
+									]
+								},
+								{
+									"type": "Entity",
+									"flags": {
+										"IncludeDependents": true,
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+									},
+									"values": [
+										{
+											"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriag3uly3ejavikumhhwzmvmz44u5w3amzhfpsodtpgq4xa",
+											"label": "PSFT_HCM"
+										}
+									]
+								},
+								{
+									"type": "LogSet",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Region",
+									"flags": {},
+									"values": [
+										{
+											"value": "us-phoenix-1",
+											"label": "US West (Phoenix)"
+										}
+									]
+								}
+							],
+							"isGlobal": false,
+							"LogGroup": {
+								"type": "LogGroup",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+										"label": "LogAnalytics"
+									}
+								]
+							},
+							"Entity": {
+								"type": "Entity",
+								"flags": {
+									"IncludeDependents": true,
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+								},
+								"values": [
+									{
+										"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriag3uly3ejavikumhhwzmvmz44u5w3amzhfpsodtpgq4xa",
+										"label": "PSFT_HCM"
+									}
+								]
+							},
+							"LogSet": {
+								"type": "LogSet",
+								"flags": {},
+								"values": []
+							},
+							"Region": {
+								"type": "Region",
+								"flags": {},
+								"values": [
+									{
+										"value": "us-phoenix-1",
+										"label": "US West (Phoenix)"
+									}
+								]
+							}
+						},
+						"internalKey": "ocid1.managementsavedsearch.oc1..aaaaaaaax42b3lnzpzj7mubkw2arlhng6kcjwiqzwlglcbfnwjr2dkxkkg6q",
+						"vizType": "lxSavedSearchWidgetType",
+						"enableWidgetInApp": true
+					},
+					"dataConfig": [],
+					"screenImage": " ",
+					"metadataVersion": "2.0",
+					"widgetTemplate": "visualizations/chartWidgetTemplate.html",
+					"widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+					"freeformTags": {},
+					"definedTags": {},
+					"parametersConfig": [
+						{
+							"name": "log-analytics-log-group-compartment",
+							"displayName": "Log Group Compartment",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-4a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-entity",
+							"displayName": "Entity",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-2a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-log-set",
+							"displayName": "Log Set",
+							"required": true,
+							"hidden": "$(window.logSetNotEnabled)",
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-3a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-region",
+							"displayName": "Region",
+							"required": false,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-region-filter"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-region-filter"
+								}
+							}
+						},
+						{
+							"name": "time",
+							"displayName": "$(bundle.globalSavedSearch.TIME)",
+							"required": true,
+							"hidden": true
+						},
+						{
+							"name": "flex"
+						}
+					],
+					"featuresConfig": {
+						"crossService": {
+							"shared": false
+						}
+					},
+					"drilldownConfig": []
+				},
+				{
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaaejmr24gjkwai5mojmcjjqmt2gxvbbekw45vbidvrtl7oefxx4o3a",
+					"displayName": "PSFT Problem Labels",
+					"providerId": "log-analytics",
+					"providerVersion": "3.0.0",
+					"providerName": "Logging Analytics",
+					"compartmentId": "${compartment_ocid}",
+					"isOobSavedSearch": false,
+					"description": "PSFT Problem labels identified in Concurrent Request Logs, Transaction Logs, Processing Logs",
+					"nls": {},
+					"type": "WIDGET_SHOW_IN_DASHBOARD",
+					"uiConfig": {
+						"timeSelection": {
+							"timePeriod": "l60min"
+						},
+						"showTitle": true,
+						"visualizationType": "cloud",
+						"visualizationOptions": {},
+						"queryString": "'Problem Priority' != null and 'Log Source' in ('EBS Concurrent Request Logs', 'EBS Concurrent Manager Logs', 'EBS Internal Concurrent Manager Logs', 'EBS Transaction Manager Logs') | eval pos = indexOf(Entity, '/') | eval entity = if(pos != -1, substr(Entity, 0, pos), Entity) | stats count by Label, entity",
+						"scopeFilters": {
+							"filters": [
+								{
+									"type": "LogGroup",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+											"label": "LogAnalytics"
+										}
+									]
+								},
+								{
+									"type": "Entity",
+									"flags": {
+										"IncludeDependents": true,
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa43sxehcf56mest2voqesz5c3q3e5u3qho5hjz6xvz4ph5cxpnghq"
+									},
+									"values": [
+										{
+											"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriac22hsfec4dfasklcd5kl45vxjcsanez3kzeraoqgh5iq",
+											"label": "PSFT_FSCM"
+										}
+									]
+								},
+								{
+									"type": "LogSet",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Region",
+									"flags": {},
+									"values": [
+										{
+											"value": "us-ashburn-1",
+											"label": "US East (Ashburn)"
+										}
+									]
+								}
+							],
+							"isGlobal": false,
+							"LogGroup": {
+								"type": "LogGroup",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+										"label": "LogAnalytics"
+									}
+								]
+							},
+							"Entity": {
+								"type": "Entity",
+								"flags": {
+									"IncludeDependents": true,
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa43sxehcf56mest2voqesz5c3q3e5u3qho5hjz6xvz4ph5cxpnghq"
+								},
+								"values": [
+									{
+										"value": "ocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriac22hsfec4dfasklcd5kl45vxjcsanez3kzeraoqgh5iq",
+										"label": "PSFT_FSCM"
+									}
+								]
+							},
+							"LogSet": {
+								"type": "LogSet",
+								"flags": {},
+								"values": []
+							},
+							"Region": {
+								"type": "Region",
+								"flags": {},
+								"values": [
+									{
+										"value": "us-ashburn-1",
+										"label": "US East (Ashburn)"
+									}
+								]
+							}
+						},
+						"vizType": "lxSavedSearchWidgetType",
+						"enableWidgetInApp": true
+					},
+					"dataConfig": [],
+					"screenImage": " ",
+					"metadataVersion": "2.0",
+					"widgetTemplate": "visualizations/chartWidgetTemplate.html",
+					"widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+					"freeformTags": {},
+					"definedTags": {},
+					"parametersConfig": [
+						{
+							"name": "log-analytics-log-group-compartment",
+							"displayName": "Log Group Compartment",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-4a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-entity",
+							"displayName": "Entity",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-2a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-log-set",
+							"displayName": "Log Set",
+							"required": true,
+							"hidden": "$(window.logSetNotEnabled)",
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-3a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-region",
+							"displayName": "Region",
+							"required": false,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-region-filter"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-region-filter"
+								}
+							}
+						},
+						{
+							"name": "time",
+							"displayName": "$(bundle.globalSavedSearch.TIME)",
+							"required": true,
+							"hidden": true
+						},
+						{
+							"name": "flex"
+						}
+					],
+					"featuresConfig": {
+						"crossService": {
+							"shared": false
+						}
+					},
+					"drilldownConfig": []
+				},
+				{
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaakxltx5xegsw7lv2adjczkapjdc3u6pklf7u7zjxtn3n2k3dtg56a",
+					"displayName": "SD: PSFT Functional Issues",
+					"providerId": "log-analytics",
+					"providerVersion": "3.0.0",
+					"providerName": "Logging Analytics",
+					"compartmentId": "${compartment_ocid}",
+					"isOobSavedSearch": false,
+					"description": "PSFT Functional Issues",
+					"nls": {},
+					"type": "WIDGET_SHOW_IN_DASHBOARD",
+					"uiConfig": {
+						"timeSelection": {
+							"timePeriod": "l60min"
+						},
+						"showTitle": true,
+						"visualizationType": "link",
+						"visualizationOptions": {
+							"customVizOpt": {
+								"GEOMAP_SETTINGS": {
+									"basemap": "bi_world_map_light",
+									"clusterColor": "rgb(192, 192, 192)",
+									"filterOnZoom": false,
+									"isShowLegend": true,
+									"lat": 2273030.9269876887,
+									"lon": 0,
+									"mapZoom": 1,
+									"pointColor": "rgb(0, 0, 255)",
+									"srid": 3857,
+									"toggleClusters": false
+								},
+								"LINK_SEARCH_SETTINGS": {
+									"chartHeightVal": 200,
+									"chartOptions": "bar",
+									"chartType": "bar",
+									"chartWidthVal": 60,
+									"columnAliases": {},
+									"dashboardOptions": {
+										"showTabs": [],
+										"showSummary": [
+											"on"
+										],
+										"showAnalyzeTab": [],
+										"showTSCharts": [],
+										"showChartsTab": [],
+										"showTable": [
+											"on"
+										]
+									},
+									"groupAliasP": "Unique Issues",
+									"groupAliasS": "Issue",
+									"hiddenCharts": {
+										"groupColumn": true
+									},
+									"hiddenClassifyCharts": {},
+									"hiddenColumns": {
+										"eventstats13_func1_sum_g_count": true,
+										"eventstats13_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"eventstats14_func1_sum_g_count": true,
+										"eventstats14_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"eventstats8_func1_sum_g_count": true,
+										"eventstats8_func2_distinct_count_lookupField4xt_5540322972955376823xf17": true,
+										"g_duration": true,
+										"g_endepoch": true,
+										"g_startepoch": true,
+										"query_end_time": true,
+										"query_start_time": true,
+										"trend_interval": true,
+										"trend_interval_unit": true,
+										"eventstats8_func3_distinct_count_lookupField4xt_5540322972955376823xf14": true,
+										"eventstats8_func4_distinct_count_msrcid": true
+									},
+									"highlightColumnStatus": {
+										"highlightedGroup1": {
+											"on": true,
+											"title": true
+										}
+									},
+									"linkSummaryInput": "card=<field:Affected Product Areas>\ncard=<field:Affected Business Flows>\ncard=<field:Unique Sensors Triggered>\ncard=<field:Total Sensor Triggers>",
+									"logAliasP": "PSFT Sensor Triggers",
+									"mergeHighlightColumns": [
+										"off"
+									],
+									"showAllRegions": [],
+									"showCombinedCharts": [
+										"off"
+									],
+									"showNonUnitRawData": [
+										"off"
+									],
+									"showStack": [
+										"off"
+									],
+									"showToolTips": [
+										"on"
+									],
+									"showUnitRawData": [],
+									"smartGroup": [
+										"off"
+									],
+									"styleDefaults": {
+										"lineType": "curved",
+										"markerDisplayed": "on"
+									},
+									"tableColumns": [
+										"High Priority",
+										"Issue",
+										"Description",
+										"Number of Issues",
+										"Business Flow",
+										"Business Impact",
+										"Product to raise SR if help needed",
+										"Prod Area",
+										"File SR",
+										"Total Issues",
+										"Product Areas",
+										"Name",
+										"Segment1",
+										"Segment2",
+										"Segment3",
+										"ST",
+										"ET",
+										"S1",
+										"More Info",
+										"ST1",
+										"ET1",
+										"S2",
+										"Log Source",
+										"Count",
+										"Sensor",
+										"Number of triggers",
+										"Issue Support Link",
+										"Unique Issues",
+										"abc",
+										"Affected Business Flows",
+										"Unique Sensors Triggered",
+										"Affected Product Areas"
+									],
+									"timeseries": {},
+									"ms": [
+										"on"
+									]
+								},
+								"primaryFieldDname": "Original Log Content",
+								"primaryFieldIname": "mbody"
+							}
+						},
+						"queryString": "'Log Source' like 'PSFT Sensor*' | link 'Log Source' | rename Count as 'Number of triggers' | stats latest(sensor) as Sensor | lookup table = 'PeopleSoft Functional Sensors' select 'Issue Summary', 'Issue Description' as Description, 'Solution KM Note' as N1, 'Business Flow', 'Business Impact', 'Product to raise SR if help needed', 'Prod Area', 'Issue Severity' using Sensor = 'Metric Name' | eval 'Issue Support Link' = url('https://support.oracle.com/knowledge/PeopleSoft%20Enterprise/' || replace(N1, '.', _) || '.html', 'Issue Summary') | eval 'File SR' = url('https://support.oracle.com/epmos/faces/SrCreate', SR) | highlightgroups color = #FF5733 [ * | where 'Issue Severity' = '4' ] as 'High Priority' | eventstats sum('Number of triggers') as 'Total Sensor Triggers', distinctcount('Prod Area') as 'Affected Product Areas', distinctcount('Business Flow') as 'Affected Business Flows', distinctcount('Log Source') as 'Unique Sensors Triggered' | fields -N1, -'Issue Severity', -Sensor, -'Issue Summary', 'Log Source' as Sensor",
+						"scopeFilters": {
+							"filters": [
+								{
+									"type": "LogGroup",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+											"label": "LogAnalytics"
+										}
+									]
+								},
+								{
+									"type": "MetricCompartment",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Entity",
+									"flags": {
+										"IncludeDependents": true,
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+									},
+									"values": []
+								},
+								{
+									"type": "LogSet",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "ResourceCompartment",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq",
+											"label": "emdemo (root)"
+										}
+									]
+								},
+								{
+									"type": "LogFields",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Region",
+									"flags": {},
+									"values": [
+										{
+											"value": "us-phoenix-1",
+											"label": "US West (Phoenix)"
+										}
+									]
+								}
+							],
+							"isGlobal": false,
+							"LogGroup": {
+								"type": "LogGroup",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q",
+										"label": "LogAnalytics"
+									}
+								]
+							},
+							"MetricCompartment": {
+								"type": "MetricCompartment",
+								"flags": {},
+								"values": []
+							},
+							"Entity": {
+								"type": "Entity",
+								"flags": {
+									"IncludeDependents": true,
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaa4yj2x6hjxntcf5vydrdvsm3trgblkmwgcmvxiar2miklv3ip4t7q"
+								},
+								"values": []
+							},
+							"LogSet": {
+								"type": "LogSet",
+								"flags": {},
+								"values": []
+							},
+							"ResourceCompartment": {
+								"type": "ResourceCompartment",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq",
+										"label": "emdemo (root)"
+									}
+								]
+							},
+							"LogFields": {
+								"type": "LogFields",
+								"flags": {},
+								"values": []
+							},
+							"Region": {
+								"type": "Region",
+								"flags": {},
+								"values": [
+									{
+										"value": "us-phoenix-1",
+										"label": "US West (Phoenix)"
+									}
+								]
+							}
+						},
+						"internalKey": "ocid1.managementsavedsearch.oc1..aaaaaaaakxltx5xegsw7lv2adjczkapjdc3u6pklf7u7zjxtn3n2k3dtg56a",
+						"vizType": "lxSavedSearchWidgetType",
+						"enableWidgetInApp": true
+					},
+					"dataConfig": [],
+					"screenImage": " ",
+					"metadataVersion": "2.0",
+					"widgetTemplate": "visualizations/chartWidgetTemplate.html",
+					"widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+					"freeformTags": {},
+					"definedTags": {},
+					"parametersConfig": [
+						{
+							"name": "log-analytics-log-group-compartment",
+							"displayName": "Log Group Compartment",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-4a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-entity",
+							"displayName": "Entity",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-2a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-log-set",
+							"displayName": "Log Set",
+							"required": true,
+							"hidden": "$(window.logSetNotEnabled)",
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-3a"
+							],
+							"editUi": {
+								"inputType": "none"
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-region",
+							"displayName": "Region",
+							"required": false,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-region-filter"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-region-filter"
+								}
+							}
+						},
+						{
+							"name": "time",
+							"displayName": "$(bundle.globalSavedSearch.TIME)",
+							"required": true,
+							"hidden": true
+						},
+						{
+							"name": "flex"
+						}
+					],
+					"featuresConfig": {
+						"crossService": {
+							"shared": false
+						}
+					},
+					"drilldownConfig": []
+				}
+			],
+			"parametersConfig": [
+				{
+					"savedSearchId": "OOBSS-management-dashboard-filter-4a",
+					"displayName": "Log Group Compartment",
+					"state": "DEFAULT",
+					"parametersMap": {
+						"isStoreInLocalStorage": true
+					},
+					"name": "log-analytics-loggroup-filter",
+					"localStorageKey": "log-analytics-loggroup-filter"
+				},
+				{
+					"savedSearchId": "OOBSS-management-dashboard-filter-2a",
+					"displayName": "Entity",
+					"width": 6,
+					"state": "DEFAULT",
+					"parametersMap": {
+						"isStoreInLocalStorage": true
+					},
+					"name": "log-analytics-entity-filter",
+					"localStorageKey": "log-analytics-entity-filter"
+				},
+				{
+					"name": "time",
+					"displayName": "$(bundle.globalSavedSearch.TIME)",
+					"src": "$(context.time)"
+				},
+				{
+					"name": "time",
+					"displayName": "$(bundle.globalSavedSearch.TIME)",
+					"src": "$(context.time)"
+				}
+			],
+			"featuresConfig": {
+				"crossService": {
+					"shared": false
+				}
+			},
+			"drilldownConfig": [],
+			"freeformTags": {},
+			"definedTags": {}
+		}
+	]
+}
