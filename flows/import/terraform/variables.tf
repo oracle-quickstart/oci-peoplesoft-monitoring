@@ -143,4 +143,3 @@ variable "dashboard_files" {
   default = ["PSFT-Dashboards.json"]
   #default = ["PSFT-sensors-dashboard.json"]
 }
-
